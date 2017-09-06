@@ -1,15 +1,15 @@
 # Site settings
-name: 大西君的博客
+name: 大西的银河系
 email: wnh_008@163.com
 author: Darcy
 url: http://blog.marvingalaxy.info
 resume_site: http://blog.marvingalaxy.info/me/
 github: https://github.com/banlangen/
 baseurl: ""  #根目录
-description: 無話可說
-motto: I'm bad, that's good, I will never be good, that's not bad.
+description: 
+motto: 时间只不过是一种幻觉而已。
 #motto: 如果生活欺骗了你，不要悲伤，不要哭泣。
-banner: becomming stronger ...
+banner: Don't panic ...
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
 excerpt_separator:  '<!-- more -->' #文章摘要
