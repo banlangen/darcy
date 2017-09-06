@@ -7,9 +7,9 @@ resume_site: http://blog.marvingalaxy.info/me/
 github: https://github.com/banlangen/
 baseurl: ""  #根目录
 description: I'm bad, that's good, I will never be good, that's not bad.
-motto: 我们笑着说再见，却深知再见遥遥无期。
+motto: I'm bad, that's good, I will never be good, that's not bad.
 #motto: 如果生活欺骗了你，不要悲伤，不要哭泣。
-banner: becomming stronger。
+banner: becomming stronger ...
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
 excerpt_separator:  '<!-- more -->' #文章摘要
