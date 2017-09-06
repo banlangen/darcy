@@ -7,9 +7,13 @@
 		<p class="copyright">Copyright &copy; {{ site.time | date: '%Y' }} <a href="{{site.resume_site}}" target="_blank"><code>{{ site.author }}</code></a>. All rights reserved. </p>
 		<p>Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>， Data by <a href="https://tongji.baidu.com/web/23811489/overview/index" target="_blank">Bai Du</a>.</p>
 	</div>
-	<audio autoplay="autoplay">
+	<!--<audio autoplay="autoplay">
     	<source = src="music/Musique-film-Dunkerque.mp3" type="audio/mp3">
-	</audio>
+	</audio>-->
+	    <!-- Display the audio player with control buttons. -->
+    <audio src="music/Musique-film-Dunkerque.mp3" controls autoplay loop> 
+        HTML5 audio not supported
+    </audio>
 	<ul id="gotop"><li><span>TOP</span></li></ul>
 </footer>
 <script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
