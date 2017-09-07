@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Leetcode 14. Longest Common Prefix"
+title: "Leetcode 15. 3Sum"
 date: 2017-09-07 19:00:00 +0800 
 categories: 算法
 tag: C++
