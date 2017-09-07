@@ -99,4 +99,14 @@ public :
 
 #### Video
 
-<embed src='http://player.youku.com/player.php/sid/XMjkwMzEwNTAwNA==/v.swf' allowFullScreen='true' quality='high' width='800' height='600' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'>
+<div id="youkuplayer" style="width:480px;height:400px"></div>
+<script type="text/javascript" src="//player.youku.com/jsapi"></script>
+<script type="text/javascript">
+var player = new YKU.Player('youkuplayer',{ 
+styleid: '0',
+client_id: 'YOUR YOUKUOPENAPI CLIENT_ID',
+vid: 'XMjkwMzEwNTAwNA==',
+newPlayer: true
+});
+
+</script>
