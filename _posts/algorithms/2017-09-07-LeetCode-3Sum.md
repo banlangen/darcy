@@ -43,9 +43,9 @@ tag: C++
 此时nums[l] + nums[r]的值为3，而实际我们希望两者的加和等于1（nums[i] == -1），现在的加和大于目标加和值, 为了寻找可能的答案，需要降低加和的大小，所以只能向左移动r, 也就是r--  
 ![Given Array](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode15/leetcode15_02.png)  
 此时nums[l]与nums[r]的加和等于目标值1, 其中一个备选答案已经找到，这个时候要注意，我们需要继续寻找答案，但是也要同时排除掉所有的重复答案，此时此刻，可以看出下图的红色画圈部分的值都是重复答案，由于数组已经排序，所以去重复非常简单，只需要看l的下一个位置值和r的上一个位置值是否分别与l, r位置上的值一样，如果一样就直接跳过。  
-![Given Array](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode15leetcode15_03.png)  
+![Given Array](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode15/leetcode15_03.png)  
 如此循环，直到l >= r, 循环结束，上面我们有提到i其实可以去到nums.size()-1, 原因就在于，n-3是i的最后一个l小于r的下标，再往下l就大于等于r了，故不是很有必要限制i的值  
-![Give Array](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode15leetcode15_04.png)  
+![Give Array](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode15/leetcode15_04.png)  
 以上的做法的前提条件便是需要数组是已排序的，所以在操作之前必须对数组进行sort。
 
 这里容易忘记的是其实对于下标为i的元素，也会有重复的值，所以这个重复的值也应该直接跳过，使用的方法可以见后面代码。
