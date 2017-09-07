@@ -44,7 +44,7 @@ tag: C++
 ![Given Array](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode15/leetcode15_02.png)  
 此时nums[l]与nums[r]的加和等于目标值1, 其中一个备选答案已经找到，这个时候要注意，我们需要继续寻找答案，但是也要同时排除掉所有的重复答案，此时此刻，可以看出下图的红色画圈部分的值都是重复答案，由于数组已经排序，所以去重复非常简单，只需要看l的下一个位置值和r的上一个位置值是否分别与l, r位置上的值一样，如果一样就直接跳过。  
 ![Given Array](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode15leetcode15_03.png)  
-如此循环，直到l >= r, 循环结束
+如此循环，直到l >= r, 循环结束  
 ![Give Array](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode15leetcode15_04.png)  
 
 #### Code
