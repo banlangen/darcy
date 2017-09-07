@@ -99,4 +99,6 @@ public :
 
 #### Video
 
-<embed src=”http://static.youku.com/qplayer.swf?playMode=mp4&winType=index&VideoIDS=XMjkwMzEwNTAwNA==&isAutoPlay=false&ShowRelatedVideo=false” type=”application/x-shockwave-flash” allowscriptaccess=”always” allowfullscreen=”true” wmode=”opaque” width=”800″ height=”600″></embed>
+<embed src='http://static.youku.com/qplayer.swf?playMode=mp4&winType=index&VideoIDS=XMjkwMzEwNTAwNA==&isAutoPlay=false&ShowRelatedVideo=false' type='application/x-shockwave-flash' allowscriptaccess='always' allowfullscreen='true' wmode='opaque' width='800' height='600'></embed>
+<!--
+<embed src='http://player.youku.com/player.php/sid/XMjkwMzEwNTAwNA==/v.swf' allowFullScreen='true' quality='high' width='800' height='600' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash' wmode="opaque"></embed>-->
