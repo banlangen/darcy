@@ -27,7 +27,7 @@ date: 2017-02-18 18:34:51 +0800
 
 您可以选择手机支付宝扫一扫
 
-<img src="{{ '/styles/images/zhifubao.jpg' | prepend: site.baseurl }}" alt="支付宝二维码付款给小可嗒嗒" />
+<img src="{{ '/styles/images/zhifubao.jpg' | prepend: site.baseurl }}" alt="支付宝二维码付款给大西" />
 
 -----------------------------------------
 
