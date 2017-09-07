@@ -36,11 +36,13 @@ tag: C++
 
 在确定了i之后，剩下的就可以用leetcode 01的解法去解答这道题，但是需要注意的是，leetcode 01只要求给出一个答案，而这里要求给出所有的可能，所以找到合适的匹配之后还需要继续寻找，不能return，具体细节这个地方就不再赘述了。
 
-现在我们想讨论另外一种解法，leetcode 01的解法中我们用到了额外的数据空间，创建了一个priority_queue<int>, 用于存放已经访问过的元素以及其对应的下标，而实际上我们并不是一定要用到这个额外的数据空间。
+现在我们想讨论另外一种解法，leetcode 01的解法中我们用到了额外的数据空间，创建了一个priority_queue<int>， 用于存放已经访问过的元素以及其对应的下标，而实际上我们并不是一定要用到这个额外的数据空间。
 
-假设现在我们有一个从左向右依次增大的排序数组（为什么讨论排序数组后面会解释）  
-![Given Array](http://ovwkcbdpf.bkt.clouddn.com/leetcode15_01.png)  
-其中定义l和r分别代表下要取的第二个和第三个元素的下标
+假设现在我们有一个从左向右依次增大的排序数组（为什么讨论排序数组后面会解释）其中定义l和r分别代表下要取的第二个和第三个元素的下标，  
+![Given Array](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode15/leetcode15_01.png)  
+此时nums[l] + nums[r]的值为3，而实际我们希望两者的加和等于1（nums[i] == -1），现在的加和大与目标加和值, 为了寻找可能的答案，需要降低加和的大小，所以只能向左移动r, 也就是r--  
+![Given Array](http://http://ovwkcbdpf.bkt.clouddn.com/image/leetcode15/leetcode15_02.png)  
+
 
 #### Code
 ```cpp
