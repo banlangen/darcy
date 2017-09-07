@@ -40,9 +40,11 @@ tag: C++
 
 假设现在我们有一个从左向右依次增大的排序数组（为什么讨论排序数组后面会解释）其中定义l和r分别代表下要取的第二个和第三个元素的下标，  
 ![Given Array](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode15/leetcode15_01.png)  
-此时nums[l] + nums[r]的值为3，而实际我们希望两者的加和等于1（nums[i] == -1），现在的加和大与目标加和值, 为了寻找可能的答案，需要降低加和的大小，所以只能向左移动r, 也就是r--  
+此时nums[l] + nums[r]的值为3，而实际我们希望两者的加和等于1（nums[i] == -1），现在的加和大于目标加和值, 为了寻找可能的答案，需要降低加和的大小，所以只能向左移动r, 也就是r--  
 ![Given Array](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode15/leetcode15_02.png)  
 
+此时nums[l]与nums[r]的加和等于目标值1, 其中一个备选答案已经找到，这个时候要注意，我们需要继续寻找答案，但是也要同时排除掉所有的重复答案，此时此刻，可以看出下图的红色画圈部分的值都是重复答案    
+![Given Array](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode15leetcode15_03.png)  
 
 #### Code
 ```cpp
