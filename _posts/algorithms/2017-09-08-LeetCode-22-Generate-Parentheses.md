@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Leetcode 18. 4Sum"
+title: "Leetcode 22. Generate Parentheses"
 date: 2017-09-08 19:00:00 +0800 
 categories: 算法
 tags: 
