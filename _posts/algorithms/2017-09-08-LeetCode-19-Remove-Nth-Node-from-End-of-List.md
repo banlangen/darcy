@@ -35,50 +35,31 @@ Try to do this in one pass.
 其中有两个需要注意的点，第一是fast->next == NULL结束，而不是fast == NULL, 第二个就是当我们需要__改动链表结构__的时候都需要使用dummy node, 所以务必使用dummy node, 不要问我为什么，自己推导下就ok了。
 
 #### Code
-
-[code source](http://www.jiuzhang.com/solution/4sum '取自九章算法')  
+ 
 ```cpp
 class Solution {
 public:
-    vector<vector<int>> fourSum(vector<int>& nums, int target) {
-        int len = nums.size();
-        int left, right, sum;
-        sort(nums.begin(), nums.end());
-        vector<vector<int>> res;
-        vector<int> tmp;
-        for (int i = 0; i < len - 3; i++) {
-            if (i && nums[i] == nums[i - 1]) continue;
-            for (int j = i + 1; j < len - 2; j++) {
-                if (j != i + 1 && nums[j] == nums[j - 1]) continue;
-                sum = target - nums[i] - nums[j];
-                left = j + 1;
-                right = len - 1;
-                while (left < right) {
-                    if (nums[left] + nums[right] == sum) {
-                        tmp.clear();
-                        tmp.push_back(nums[i]);
-                        tmp.push_back(nums[j]);
-                        tmp.push_back(nums[left]);
-                        tmp.push_back(nums[right]);
-                        res.push_back(tmp);
-                        left++;
-                        right--;
-                        while (left < right && nums[left] == nums[left - 1]) left++;
-                        while (left < right && nums[right] == nums[right + 1]) right--;
-                    } else 
-                        if (nums[left] + nums[right] > sum) right--;
-                        else left++;
-                }
-            }
+    ListNode *removeNthFromEnd (ListNode *head, int n) {
+        ListNode *dummy = new ListNode(0);
+        dummy->next = head;
+        ListNode *slow = dummy;
+        ListNode *fast = dummy;
+        for (int i = 0; i < n; i++) {
+            fast = fast->next;
         }
-        return res;
+        while (fast->next != NULL) {
+            fast = fast->next;
+            slow = slow->next;
+        }
+        slow->next = slow->next->next;
+        return dummy->next;
     }
 };
 ```
 
 #### Time Complexity
 
-找到数列中所有和等于目标数的四元组，需去重多枚举一个数后，参照3Sum的做法，O(N^3)。
+由于只遍历了一次链表，所以是O(n)。
 
 #### Video
 
