@@ -40,6 +40,7 @@ $$C_n^m =\frac{n!}{m!(n-m)!}$$，根据题意，{a, b, c}中取一个为$$P_3^1 
 ![leetcode17_03](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode17/leetcode17_03.png)
 #### Code
 ```cpp
+//代码来自[source](http://www.jiuzhang.com/solution/letter-combinations-of-a-phone-number "九章算法")
 class Solution {
 public :
     const vector<string> keyboard = {" ", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
@@ -56,6 +57,10 @@ public :
     void dfs (const string &digits, size_t idx, string path, vector<string> &result) {
         if (idx == digits.size()) { //如果到达了树的叶节点
             result.push_back(path);
+            return;
+        }
+        for (auto c : keyboard[digits[idx] - '0']) {
+            dfs (digits, idx + 1, path + c, result);
         }
     }
 };
