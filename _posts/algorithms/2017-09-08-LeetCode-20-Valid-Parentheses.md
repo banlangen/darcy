@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Leetcode 18. 4Sum"
+title: "Leetcode 20. Valid Parentheses"
 date: 2017-09-08 19:00:00 +0800 
 categories: 算法
 tags: 
-    - 2 pointers
+    - ds-stack
 ---
 * content
 {:toc}
@@ -13,73 +13,52 @@ tags:
 
 <!-- more -->
 
-## 4Sum
+## Valid Parenthese
 
 #### Description
 
->Give an array S of n integers, are there elements a, b, c and d in S such that a + b + c + d = target ? Find all unique quadruplets in the array which gives the sum of target.  
-
->__Note__:The solution set must not contain duplicate quadruplets. 
-
->For example, given array S = [1, 0, -1, 0, -2, 2], and target = 0.  
-
->A solution set is :  
-[  
-  [-1, 0, 0, 1],  
-  [-2, -1, 1, 2],  
-  [-2, 0, 0, 2]  
-]
+>Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.  
+The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not. 
 
 #### Solution
 
-没啥好说的，2 pointers做法，期间要经过两次循环转换成2Sum做法。  
-详见其他几道2 pointers题目。
+这是一道检查stack概念的例题，可以采用一个符号栈，思路就是遇到'(', '[', '{' 就入栈，遇到')', ']', '}'就检查栈顶看是否匹配，如果不匹配，reture false, 如果匹配，出栈，继续检查。
 
 #### Code
 
-[code source](http://www.jiuzhang.com/solution/4sum '取自九章算法')  
 ```cpp
 class Solution {
 public:
-    vector<vector<int>> fourSum(vector<int>& nums, int target) {
-        int len = nums.size();
-        int left, right, sum;
-        sort(nums.begin(), nums.end());
-        vector<vector<int>> res;
-        vector<int> tmp;
-        for (int i = 0; i < len - 3; i++) {
-            if (i && nums[i] == nums[i - 1]) continue;
-            for (int j = i + 1; j < len - 2; j++) {
-                if (j != i + 1 && nums[j] == nums[j - 1]) continue;
-                sum = target - nums[i] - nums[j];
-                left = j + 1;
-                right = len - 1;
-                while (left < right) {
-                    if (nums[left] + nums[right] == sum) {
-                        tmp.clear();
-                        tmp.push_back(nums[i]);
-                        tmp.push_back(nums[j]);
-                        tmp.push_back(nums[left]);
-                        tmp.push_back(nums[right]);
-                        res.push_back(tmp);
-                        left++;
-                        right--;
-                        while (left < right && nums[left] == nums[left - 1]) left++;
-                        while (left < right && nums[right] == nums[right + 1]) right--;
-                    } else 
-                        if (nums[left] + nums[right] > sum) right--;
-                        else left++;
+    bool isValidParenthese(string s) {
+        stack<int> st;
+        for (int i = 0; i < s.length(); i++) {
+            if (s[i] == '(' || s[i] == '[' || s[i] == '{') {
+                st.push(s[i]);
+            } else {
+                if (s[i] == ')' && st.top() != '(') {
+                    return false;
                 }
+                if (s[i] == ']' && st.top() != '[') {
+                    return false;
+                }
+                if (s[i] == '}' && st.top() != '}') {
+                    return false;
+                }
+                st.pop();
             }
         }
-        return res;
+        if (!st.empty()) {
+            return false;
+        } else {
+            return true;
+        }
     }
 };
 ```
 
 #### Time Complexity
 
-找到数列中所有和等于目标数的四元组，需去重多枚举一个数后，参照3Sum的做法，O(N^3)。
+遍历所有的数组元素，所以是O(n)。
 
 #### Video
 
