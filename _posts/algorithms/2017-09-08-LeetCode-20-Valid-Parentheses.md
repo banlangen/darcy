@@ -22,7 +22,7 @@ The brackets must close in the correct order, "()" and "()[]{}" are all valid bu
 
 #### Solution
 
-这是一道检查stack概念的例题，可以采用一个符号栈，思路就是遇到'(', '[', '{' 就入栈，遇到')', ']', '}'就检查栈顶看是否匹配，如果不匹配，reture false, 如果匹配，出栈，继续检查。
+这是一道检查stack概念的例题，可以采用一个符号栈，思路就是遇到'(', '[', '{' 就入栈，遇到')', ']', '}'就检查栈顶看是否匹配，如果不匹配，return false, 如果匹配，出栈，继续检查。
 
 #### Code
 
