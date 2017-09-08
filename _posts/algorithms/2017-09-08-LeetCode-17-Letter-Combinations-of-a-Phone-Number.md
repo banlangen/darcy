@@ -59,7 +59,7 @@ public :
             result.push_back(path);
             return;
         }
-        for (auto c : keyboard[digits[idx] - '0']) {
+        for (auto c : keyboard[digits[idx] - '0']) {//请注意这里下标的获取技巧
             dfs (digits, idx + 1, path + c, result);
         }
     }
