@@ -3,7 +3,9 @@ layout: post
 title: "Leetcode 17. Letter Combinations of a Phone Number"
 date: 2017-09-08 19:00:00 +0800 
 categories: 算法
-tag: C++
+tags: 
+    - C++
+    - Algo
 ---
 * content
 {:toc}
