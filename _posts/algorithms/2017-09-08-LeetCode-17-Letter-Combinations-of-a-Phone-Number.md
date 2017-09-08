@@ -30,7 +30,9 @@ Although the above answer is in lexicographical order, your answer could be in a
 
 #### Solution
 
-该题是典型的采用dfs求解的问题，
+该题是典型的采用dfs求解的问题，  
+![leetcode17_02](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode17/leetcode17_02.png)  
+
 
 #### Code
 ```cpp
