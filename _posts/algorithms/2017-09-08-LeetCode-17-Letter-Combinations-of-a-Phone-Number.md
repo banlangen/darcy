@@ -4,7 +4,6 @@ title: "Leetcode 17. Letter Combinations of a Phone Number"
 date: 2017-09-08 19:00:00 +0800 
 categories: 算法
 tag: C++
-tag: Algo
 ---
 * content
 {:toc}
@@ -23,7 +22,10 @@ A mapping of digit to letters (just like on the telephone buttons) is given belo
 >![image](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode17/leetcode17_01.png)  
 
 >Input:Digit string "23"  
-Output : ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+Output : ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].  
+
+>Note:  
+Although the above answer is in lexicographical order, your answer could be in any order you want.
 
 #### Solution
 
