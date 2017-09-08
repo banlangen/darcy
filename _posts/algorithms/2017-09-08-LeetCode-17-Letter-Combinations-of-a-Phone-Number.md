@@ -30,7 +30,7 @@ Although the above answer is in lexicographical order, your answer could be in a
 
 #### Solution
 
-该问题的解法其实和leetcode 15题一样，都是通过将问题转换为2Sum问题，然后使用两根指针求解，具体解法可以直接参考以下代码，特别的，由于是求最值，所以不用特别考虑去重的问题。
+该题是典型的采用dfs求解的问题，
 
 #### Code
 ```cpp
