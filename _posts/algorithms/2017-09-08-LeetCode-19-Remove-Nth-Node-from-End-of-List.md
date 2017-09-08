@@ -25,12 +25,7 @@ For example,
 
 >__Note__:  
 Given n will always be valid.  
-Try to do this in one pass.   
-[  
-  [-1, 0, 0, 1],    
-  [-2, -1, 1, 2],  
-  [-2, 0, 0, 2]  
-]
+Try to do this in one pass.
 
 #### Solution
 
