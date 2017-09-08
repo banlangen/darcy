@@ -30,8 +30,8 @@ Although the above answer is in lexicographical order, your answer could be in a
 
 #### Solution
  
-该题是典型的采用dfs求解的问题，可以把这个问题理解成一个树，以输入数字为23为例它的根节点是""，树的第二层是2所对应的三个字母{a, b, c}， 第三层是3所对应的三个字母{d, e, f}，这样的话这棵树其实就是一个排列的结果<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default">**Powered by Mathjax**</script>
-$$P_n^m =\frac{n!}{(n-m)!}$$，根据题意，{a, b, c}中取一个，{d, e, f}中取一个，所以$$P_3^1 \cdot P_3^1 = 9$$一共有9种排列方法，也就是树的叶节点有九个  
+该题是典型的采用dfs求解的问题，可以把这个问题理解成一个树，以输入数字为“23”为例它的根节点是""，树的第二层是2所对应的三个字母{a, b, c}， 第三层是3所对应的三个字母{d, e, f}，这样的话这棵树其实就是一个排列的结果<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default">**Powered by Mathjax**</script>
+$$P_n^m =\frac{n!}{(n-m)!}$$，根据题意，{a, b, c}中取一个为$$P_3^1$$，{d, e, f}中取一个为$$P_3^1$$，所以$$P_3^1 \cdot P_3^1 = 9$$一共有9种排列方法，也就是树的叶节点有9个，我们需要做的就是遍历到树的叶节点，在从叶节点到根节点的过程中我们定义变量path来存在遍历过程中经过的节点，并在到达叶节点的时候将path存放到最后的结果result中。  
 ![leetcode17_02](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode17/leetcode17_02.png)  
 
 
