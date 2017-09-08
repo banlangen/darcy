@@ -31,8 +31,8 @@ Although the above answer is in lexicographical order, your answer could be in a
 #### Solution
 
 该题是典型的采用dfs求解的问题，可以把这个问题理解成一个树，以输入数字为23为例它的根节点是""，树的第二层是2所对应的三个字母{a, b, c}， 第三层是3所对应的三个字母{d, e, f}，这样的话这棵树其实就是一个排列的结果 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default">$$ P_n^m = \frac{n!}{(n-m)!} $$</script>
-$$C_n^m =\frac{n!}{m!(n-m)!}$$  
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+$$P_n^m =\frac{n!}{(n-m)!}$$  
 ![leetcode17_02](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode17/leetcode17_02.png)  
 
 
