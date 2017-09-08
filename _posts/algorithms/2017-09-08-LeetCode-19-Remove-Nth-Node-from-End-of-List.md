@@ -32,7 +32,7 @@ Try to do this in one pass.
 这道题的要求是“Try to do this in one pass”, 所以常规的解就不适用了，为了在1次遍历中找到并删除节点，就需要特别的思路，这里就是slow and fast pointers。  
 ![leetcode19_01](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode19/leetcode19_01.png)  
 开始的时候，我们需要定义两个指针slow和fast, 然后让fast指针先向后移动n个位置, n就是本题的输入，之后同时移动slow和fast指针，当fast->next == NULL 的时候，slow->next == target。
-其中有两个需要注意的点，第一是fast->next == NULL结束，而不是fast == NULL, 第二个就是当我们需要*改动链表结构*的时候都需要使用dummy node, 所以务必使用dummy node, 不要问我为什么，自己推导下就ok了。
+其中有两个需要注意的点，第一是fast->next == NULL结束，而不是fast == NULL, 第二个就是当我们需要**改动链表结构**的时候都需要使用dummy node, 所以务必使用dummy node, 不要问我为什么，自己推导下就ok了。
 
 #### Code
  
