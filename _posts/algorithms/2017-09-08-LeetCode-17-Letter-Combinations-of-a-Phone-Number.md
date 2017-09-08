@@ -38,9 +38,11 @@ $$C_n^m =\frac{n!}{m!(n-m)!}$$，根据题意，{a, b, c}中取一个为$$P_3^1 
 
 提到了dfs自然就要提到dfs的一个重要特性“回溯”，其实“回溯”不能说的dfs特有的，而应该是所有递归函数所有的特性。当我们获取了字符串“bd”之后，为了获取以“b”开头的下一个字符串，必须回退到path = {“b”}的状态，这个时候如下图的浅蓝色箭头一样，有了一个状态的回溯过程，然后再次从数字2的下一个数字3出发，选取除掉“d”之外的其他字符进行组合。
 ![leetcode17_03](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode17/leetcode17_03.png)
+
 #### Code
+
+[source](http://www.jiuzhang.com/solution/letter-combinations-of-a-phone-number "代码取自九章算法")  
 ```cpp
-//代码来自[source](http://www.jiuzhang.com/solution/letter-combinations-of-a-phone-number "九章算法")
 class Solution {
 public :
     const vector<string> keyboard = {" ", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
