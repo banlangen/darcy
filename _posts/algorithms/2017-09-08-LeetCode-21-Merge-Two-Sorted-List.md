@@ -17,48 +17,43 @@ tags:
 
 #### Description
 
->Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.  
-The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not. 
+>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists. 
 
 #### Solution
 
-这是一道检查stack概念的例题，可以采用一个符号栈，思路就是遇到'(', '[', '{' 就入栈，遇到')', ']', '}'就检查栈顶看是否匹配，如果不匹配，return false, 如果匹配，出栈，继续检查。
+两个排序链表的合并，是merge sort的基础，一个while循环外加if判断，注意dummy node的用法，各位看官请直接看代码。
 
 #### Code
 
 ```cpp
 class Solution {
 public:
-    bool isValidParenthese(string s) {
-        stack<int> st;
-        for (int i = 0; i < s.length(); i++) {
-            if (s[i] == '(' || s[i] == '[' || s[i] == '{') {
-                st.push(s[i]);
+    ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
+        ListNode *dummy = new ListNode(0);
+        ListNode *tmp = dummy;
+        while (l1 != NULL && L2 != NULL) {
+            if (l1->val < l2->val) {
+                tmp->next = l1;
+                l1 = l1->next;
             } else {
-                if (s[i] == ')' && st.top() != '(') {
-                    return false;
-                }
-                if (s[i] == ']' && st.top() != '[') {
-                    return false;
-                }
-                if (s[i] == '}' && st.top() != '}') {
-                    return false;
-                }
-                st.pop();
+                tmp->next = l2;
+                l2 = l2->next;
             }
+            tmp = tmp->next;
         }
-        if (!st.empty()) {
-            return false;
+        if (l1 != NULL) {
+            tmp->next = l1;
         } else {
-            return true;
+            tmp->next = l2;
         }
+        return dummy->next;
     }
 };
 ```
 
 #### Time Complexity
 
-遍历所有的数组元素，所以是O(n)。
+依次遍历两个链表的所有元素，所以是O(n)。
 
 #### Video
 
