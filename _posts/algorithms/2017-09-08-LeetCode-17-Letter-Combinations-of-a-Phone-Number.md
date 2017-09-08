@@ -30,9 +30,8 @@ Although the above answer is in lexicographical order, your answer could be in a
 
 #### Solution
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default">**Powered by Mathjax**</script>  
-该题是典型的采用dfs求解的问题，可以把这个问题理解成一个树，以输入数字为23为例它的根节点是""，树的第二层是2所对应的三个字母{a, b, c}， 第三层是3所对应的三个字母{d, e, f}，这样的话这棵树其实就是一个排列的结果 
-
-$$P_n^m =\frac{n!}{(n-m)!}$$，根据题意，$$P_3^1 \cdot P_3^1$$  
+该题是典型的采用dfs求解的问题，可以把这个问题理解成一个树，以输入数字为23为例它的根节点是""，树的第二层是2所对应的三个字母{a, b, c}， 第三层是3所对应的三个字母{d, e, f}，这样的话这棵树其实就是一个排列的结果
+$$P_n^m =\frac{n!}{(n-m)!}$$，根据题意，{a, b, c}中取一个，{d, e, f}中取一个，所以$$P_3^1 \cdot P_3^1 = 9$$一共有9种排列方法，也就是树的叶节点有九个  
 ![leetcode17_02](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode17/leetcode17_02.png)  
 
 
