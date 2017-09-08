@@ -4,7 +4,7 @@ title: "Leetcode 14. Longest Common Prefix"
 date: 2017-09-07 19:00:00 +0800 
 categories: 算法
 tags: 
-    - 2 pointers
+    - LCX
 ---
 * content
 {:toc}
