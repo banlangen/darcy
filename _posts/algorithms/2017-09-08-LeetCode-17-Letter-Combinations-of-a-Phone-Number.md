@@ -41,7 +41,7 @@ $$C_n^m =\frac{n!}{m!(n-m)!}$$，根据题意，{a, b, c}中取一个为$$P_3^1 
 
 #### Code
 
-[source](http://www.jiuzhang.com/solution/letter-combinations-of-a-phone-number "代码取自九章算法")  
+[code source](http://www.jiuzhang.com/solution/letter-combinations-of-a-phone-number "代码取自九章算法")  
 ```cpp
 class Solution {
 public :
