@@ -4,7 +4,8 @@ title: "Leetcode 22. Generate Parentheses"
 date: 2017-09-08 19:00:00 +0800 
 categories: 算法
 tags: 
-    - 2 pointers
+    - dfs
+    - bfs
 ---
 * content
 {:toc}
@@ -13,65 +14,56 @@ tags:
 
 <!-- more -->
 
-## 4Sum
+## Generate Parentheses
 
 #### Description
 
->Give an array S of n integers, are there elements a, b, c and d in S such that a + b + c + d = target ? Find all unique quadruplets in the array which gives the sum of target.  
+>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.   
 
->__Note__:The solution set must not contain duplicate quadruplets. 
+>For example, given n = 3, a solution set is: 
 
 >For example, given array S = [1, 0, -1, 0, -2, 2], and target = 0.  
 
->A solution set is :  
-[  
-  [-1, 0, 0, 1],  
-  [-2, -1, 1, 2],  
-  [-2, 0, 0, 2]  
+>[  
+  "((()))",  
+  "(()())",  
+  "(())()",  
+  "()(())",  
+  "()()()"  
 ]
 
 #### Solution
 
-没啥好说的，2 pointers做法，期间要经过两次循环转换成2Sum做法。  
-详见其他几道2 pointers题目。
-
+在整个获取字符串的过程中，L >= R 这个条件必须满足
+有两个条件必须识别出来，我们以L和R分别代表"("的个数和")"的个数, n是程序的输入  
+1. 当L < n时，可以继续放入"("，这点很重要，必须限制L，不能让L的增长超过n。    
+2. 当R < L时，可以继续放入")"  
+而当 L == R == n的时候整个过程结束
 #### Code
+
+还是回溯法，以n=3 为例子，
 
 [code source](http://www.jiuzhang.com/solution/4sum '取自九章算法')  
 ```cpp
 class Solution {
 public:
-    vector<vector<int>> fourSum(vector<int>& nums, int target) {
-        int len = nums.size();
-        int left, right, sum;
-        sort(nums.begin(), nums.end());
-        vector<vector<int>> res;
-        vector<int> tmp;
-        for (int i = 0; i < len - 3; i++) {
-            if (i && nums[i] == nums[i - 1]) continue;
-            for (int j = i + 1; j < len - 2; j++) {
-                if (j != i + 1 && nums[j] == nums[j - 1]) continue;
-                sum = target - nums[i] - nums[j];
-                left = j + 1;
-                right = len - 1;
-                while (left < right) {
-                    if (nums[left] + nums[right] == sum) {
-                        tmp.clear();
-                        tmp.push_back(nums[i]);
-                        tmp.push_back(nums[j]);
-                        tmp.push_back(nums[left]);
-                        tmp.push_back(nums[right]);
-                        res.push_back(tmp);
-                        left++;
-                        right--;
-                        while (left < right && nums[left] == nums[left - 1]) left++;
-                        while (left < right && nums[right] == nums[right + 1]) right--;
-                    } else 
-                        if (nums[left] + nums[right] > sum) right--;
-                        else left++;
-                }
+    void dfs(string s, vector<string> &res, int l, int r, int n) {
+        if (r == n) {
+            res.push_back(s);
+        } else {
+            if (l > r) {
+                dfs(s + ')', res, l, r + 1, n);
+            }
+            if (l < n) {
+                dfs(s + '(', res, l + 1, r, n);
             }
         }
+    }
+
+    vector<string> generateParenthesis(int n) {
+        vector<string> res;
+        string s;
+        dfs(s, res, 0, 0, n);
         return res;
     }
 };
