@@ -5,7 +5,7 @@ date: 2017-09-08 19:00:00 +0800
 categories: 算法
 tags: 
     - dfs
-    - bfs
+    - rcr2nonrcrs
 ---
 * content
 {:toc}
@@ -34,16 +34,22 @@ tags:
 
 #### Solution
 
+##### recursive
+
 在整个获取字符串的过程中，L >= R 这个条件必须满足
 有两个条件必须识别出来，我们以L和R分别代表"("的个数和")"的个数, n是程序的输入  
 1. 当L < n时，可以继续放入"("，这点很重要，必须限制L，不能让L的增长超过n。    
 2. 当R < L时，可以继续放入")"  
 而当 L == R == n的时候整个过程结束
+
+##### no-recursive
+
+如果用none recursive的话，主要的逻辑不变，使用stack，同时需要使用一个数据结构同时保存L, R, 以及当时构成的string.
+
 #### Code
 
-还是回溯法，以n=3 为例子，
+##### recursive
 
-[code source](http://www.jiuzhang.com/solution/4sum '取自九章算法')  
 ```cpp
 class Solution {
 public:
@@ -69,9 +75,48 @@ public:
 };
 ```
 
+##### non-recursive
+
+```cpp
+class Node {
+public:
+    string str;
+    int l;
+    int r;
+    Node(string i_str, int i_l, int i_r) {
+        l = i_l;
+        r = i_r;
+        str = i_str;
+    }
+}
+class solution {
+public:
+    vector<string> generateParenthesis(int n) {
+        vector<string> res;
+        stack<Node> st;
+        st.push(Node("", 0, 0));
+        while (!st.empty()) {
+            Node cur = st.top();
+            st.pop();
+            if (cur.l == n && cur.r == n) {
+                res.push_back(cur.str);
+                continue;
+            }
+            if (cur.l > cur.r) {
+                st.push(Node(cur.str + ")", cur.l, cur.r + 1));
+            }
+            if (cur.l < n) {
+                st.push(Node(cur.str + "(", cur.l + 1, cur.r));
+            }
+        }
+        return res;
+    }
+}
+```
+
 #### Time Complexity
 
-找到数列中所有和等于目标数的四元组，需去重多枚举一个数后，参照3Sum的做法，O(N^3)。
+这道题的时间复杂度的计算有点复杂，O(n * Cat(n)), Cat(n) 代表的是CATALAN数简单的说是指数级的时间复杂度，
 
 #### Video
 
