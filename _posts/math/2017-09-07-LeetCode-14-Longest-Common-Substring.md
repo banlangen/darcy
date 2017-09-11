@@ -22,8 +22,8 @@ tags:
 
 #### Threorem statement
 
-根据此定理，可以将x + y的任意次幂展开成和的形式  
-$$(x + y) ^ n = \binom{n}{0}x^ny^0 + \binom{n}{1}x^n-1y^1 + \binom{n}{2}x^n-2y^2 + \cdot\cdot\cdot + \binom{n}{n-1}x^1y^n-1 + \binom{n}{n}x^0y^n$$
+>根据此定理，可以将x + y的任意次幂展开成和的形式  
+$$(x + y) ^ n = \binom{n}{0}x^ny^0 + \binom{n}{1}x^n-1y^1 + \binom{n}{2}x^n-2y^2 + \cdot\cdot\cdot + \binom{n}{n-1}x^1y^n-1 + \binom{n}{n}x^0y^n$$  
 wikipedia的定义足够正式，也非常完备，但是对于初学者而言，这样的定义是需要进行阐释的。
 
 
