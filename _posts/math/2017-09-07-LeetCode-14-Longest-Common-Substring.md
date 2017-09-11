@@ -35,9 +35,7 @@ $$(x + y) ^ n = \sum\limits_{k=0}^n\binom{n}{k}x^{(n - k)}y^k = \sum\limits_{k=0
 &emsp;&emsp;大家肯定都知道$$(a + b)^2$$应该如何计算，我们有公式$$(a + b)^2 = a^2 + 2ab + b^2$$，其中的2ab是由于$$(a + b)(a + b)$$的展开过程中产生了1个ab，和1个ba，ab和ba是相同的，所以合并之后就变成了2ab，也就是有以下的推导过程:  
 &emsp;&emsp;$$(a + b)(a + b) = a^2 + ab + ba + b^2$$  
 &emsp;&emsp;那如果是$$(a + b)^3$$呢?方便说明我们不用幂指数表示。  
-&emsp;&emsp;$$(a + b)(a + b)(a + b) = aaa + aab + aba + baa + bba + bab + abb + bbb$$
-$${(x + y)^n} = \sum\limits_{k = 0}^n {\left( \begin{array}{c}
-n\\k\end{array} \right)} {x^{(n - k)}}{y^k} = \sum\limits_{k = 0}^n {\left( \begin{array}{c}n\\k\end{array} \right)} {x^k}{y^{(n - k)}}$$
+&emsp;&emsp;$$(a + b)(a + b)(a + b) = aaa + {\color{red}{aab + aba + baa}} + bba + bab + abb + bbb$$
 
 
 #### Solution
