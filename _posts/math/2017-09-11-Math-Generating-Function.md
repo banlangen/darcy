@@ -33,8 +33,7 @@ tags:
 
 &emsp;&emsp;这是一个非常简单的组合问题，那么按照组合概念，一共有$${C_2^5}^{[注1]} = \frac{5!}{2!3!} = 10$$种选择的方法。那如果我们要用生成函数来“逼近”这个问题呢？
 &emsp;&emsp;我们先别在意只能选两个水果这个条件，抛开这点约束，假设我不定要选几个水果出来，可以只选几个，也可以全选，当然也可以全不选，这样的话，水果的所有选择方法用组合公式表示就是$${C_0^5 + C_1^5 + C_2^5 + C_3^5 + C_4^5 + C_5^5 = 32}^{[注1]}$$种。换个思路我们也可以将这个问题理解为5个水果，每个都有两种选择方案，0个或者1个，那就一共有$${C_1^2 \cdot C_1^2 \cdot C_1^2 \cdot C_1^2 \cdot C_1^2 = 32}^{[注1]}$$种方案，这种思路可以用下图表示，同时在这个基础上我们尝试用二项式进行替换，替换的原则是用变量x代表水果，x的指数代表选择的个数，于是可以得到如下的对应关系  
-$$\binom{0\;pear \quad 1\;pear}{x^0 \quad + \quad x^1} \cdot \binom{0\;apple \quad 1\;apple}{x^0 \quad + \quad x^1} \cdot \binom{0\;orange \quad 1\;orange}{x^0 \quad + \quad x^1} \cdot \binom{0\;banana \quad 1\;banana}{x^0 \quad + \quad x^1} \cdot \binom{0\;papaya \quad 1\;papaya}{x^0 \quad + \quad x^1}$$
-&emsp;&emsp;请原谅我上面面用X^1代表x的1次方，图片中插入数学公式非常麻烦，这种事儿上我特别喜欢偷懒，需要特别提醒的是上面的式子中，我们用“+”来代表“或”的概念
+$$\binom{0\;pear \quad 1\;pear}{x^0 \quad + \quad x^1} \cdot \binom{0\;apple \quad 1\;apple}{x^0 \quad + \quad x^1} \cdot \binom{0\;orange \quad 1\;orange}{x^0 \quad + \quad x^1} \cdot \binom{0\;banana \quad 1\;banana}{x^0 \quad + \quad x^1} \cdot \binom{0\;papaya \quad 1\;papaya}{x^0 \quad + \quad x^1}$$需要特别提醒的是上面的式子中，我们用“+”来代表“或”的概念
 
 #### Comments
 
