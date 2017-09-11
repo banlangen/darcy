@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Generating Function"
+title: "Ordinary Generating Function"
 date: 2017-09-11 19:00:00 +0800 
 category: 数学
 tags: 
@@ -9,7 +9,7 @@ tags:
 * content
 {:toc}
 
-生成函数（Generating Function）是离散数学（Discrete Mathematics）中的一个内容，而计算机科学的数据基础是离散数学，同时由于计算机科学的迅猛发展，离散数学的概念得以广泛应用于日常生活中，两者相辅相成。这个地方我们讨论生成函数，其实是为后面讨论Catalan Number做一个铺垫，从而说明计算机编程如何将离散数学应用到具体的生活实践中。
+生成函数（Generating Function）是离散数学（Discrete Mathematics）中的一个内容，而计算机科学的数据基础是离散数学，同时由于计算机科学的迅猛发展，离散数学的概念得以广泛应用于日常生活中，两者相辅相成。这个地方我们讨论生成函数中的一种普通生成函数（Ordinary Generating Function），目的是为后面讨论Catalan Number做一个铺垫，从探讨过程中可以看到计算机编程如何将离散数学的一些基本知识应用到具体的生活实践中。
 
 <!-- more -->
 

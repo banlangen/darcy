@@ -45,6 +45,13 @@ $$(x + y) ^ n = \sum\limits_{k=0}^n\binom{n}{k}x^{n-k}y^k = \sum\limits_{k=0}^n{
 &emsp;&emsp;但是更习惯的我们会交换下x和y的指数，写成如下的等价形式：  
 &emsp;&emsp;$$(x + y) ^ n = \binom{n}{0}x^ny^0 + \binom{n}{1}x^{n-1}y^1 + \binom{n}{2}x^{n-2}y^2 + \cdot\cdot\cdot + \binom{n}{k}x^{n-k}y^k + \cdot\cdot\cdot + \binom{n}{n-1}x^1y^{n-1} + \binom{n}{n}x^0y^n$$
 
+#### Formulae
+
+&emsp;&emsp;$$x^{n-k}y^k$$的系数的计算公式用阶乘的方式表述如下： 
+&emsp;&emsp;$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$  
+&emsp;&emsp;也可以用非阶乘的方式表述：  
+&emsp;&emsp;$$\binom{n}{k} = \frac{n(n-1)\cdot\cdot\cdot(n-k+1)}{k(k-1)\cdot\cdot\cdot1} = \prod\limits_{l=1}^{k}{\frac{n-l+1}{l}}$$
+
 #### Comments
 
 - [注1]：中国大陆的教科书里面将组合（排列也是如此）的n中取k的情况标记为$$C_n^k$$，这与国际上的标注法是相反的，此处采用的是国际标注法。同时还需要注意的是排列的标记在国际上是P取自英文permutation，中国大陆的教科书中用的标记是A。此博客完全使用国际标注法。
