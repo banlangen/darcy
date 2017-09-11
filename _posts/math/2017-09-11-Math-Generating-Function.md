@@ -17,7 +17,8 @@ tags:
 
 #### Description
 
->[生成函数(Generating Function)](https://en.wikipedia.org/wiki/Generating_function)
+>[生成函数(Generating Function)](https://en.wikipedia.org/wiki/Generating_function), 定义如下：  
+&emsp;&emsp;In mathematics, the term generating function is used to describe an infinite sequence of numbers (an) by treating them as the coefficients of a series expansion. The sum of this infinite series is the generating function. Unlike an ordinary series, this formal series is allowed to diverge, meaning that the generating function is not always a true function and the "variable" is actually an indeterminate. Generating functions were first introduced by Abraham de Moivre in 1730, in order to solve the general linear recurrence problem.[1] One can generalize to formal series in more than one indeterminate, to encode information about arrays of numbers indexed by several natural numbers.
 
 #### Threorem statement
 
