@@ -42,7 +42,7 @@ $$(x + y) ^ n = \sum\limits_{k=0}^n\binom{n}{k}x^{n-k}y^k = \sum\limits_{k=0}^n{
 &emsp;&emsp;接着需要理解x和y的指数的加和是n，这个用组合的方法也很好解释，n个$$(x + y)$$中要进行n次挑选，每次挑选不是选x就是选y，自然最后就有k个x和n-k个y。 
 
 &emsp;&emsp;所以最后我们就可以得到这样的公式：  
-$$(x + y) ^ n = \binom{n}{0}x^0y^n + \binom{n}{1}x^{1}y^{n-1} + \binom{n}{2}x^{2}y^{n-2} + \cdot\cdot\cdot + \binom{n}{k}x^{k}y^{n-k} + \cdot\cdot\cdot + \binom{n}{n-1}x^{n-1}y^1 + \binom{n}{n}x^ny^0$$  
+&emsp;&emsp;$$(x + y) ^ n = \binom{n}{0}x^0y^n + \binom{n}{1}x^{1}y^{n-1} + \binom{n}{2}x^{2}y^{n-2} + \cdot\cdot\cdot + \binom{n}{k}x^{k}y^{n-k} + \cdot\cdot\cdot + \binom{n}{n-1}x^{n-1}y^1 + \binom{n}{n}x^ny^0$$  
 &emsp;&emsp;但是更习惯的我们会交换下x和y的指数，写成如下的等价形式：  
 &emsp;&emsp;$$(x + y) ^ n = \binom{n}{0}x^ny^0 + \binom{n}{1}x^{n-1}y^1 + \binom{n}{2}x^{n-2}y^2 + \cdot\cdot\cdot + \binom{n}{k}x^{n-k}y^k + \cdot\cdot\cdot + \binom{n}{n-1}x^1y^{n-1} + \binom{n}{n}x^0y^n$$
 
