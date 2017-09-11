@@ -40,7 +40,6 @@ $$(x + y) ^ n = \sum\limits_{k=0}^n\binom{n}{k}x^{n-k}y^k = \sum\limits_{k=0}^n{
 &emsp;&emsp;现在我们延伸到n次方的情形，考虑$$(x + y)^n$$，相当于$$(x + y)(x + y)\cdot\cdot\cdot(x + y)$$一共有n项$$(x + y)$$相乘，现在要求$$x^ky^{n-k}$$的系数，也就是n个$$(x + y)$$中挑选k个x出来，那么最后的答案就是$${C_k^n}^{[注1]} = \frac{n!}{k!(n-k)!}$$。
 
 &emsp;&emsp;接着需要理解x和y的指数的加和是n，这个用组合的方法也很好解释，n个$$(x + y)$$中要进行n次挑选，每次挑选不是选x就是选y，自然最后就有k个x和n-k个y。 
-
 &emsp;&emsp;所以最后我们就可以得到这样的公式：  
 &emsp;&emsp;$$(x + y) ^ n = \binom{n}{0}x^0y^n + \binom{n}{1}x^{1}y^{n-1} + \binom{n}{2}x^{2}y^{n-2} + \cdot\cdot\cdot + \binom{n}{k}x^{k}y^{n-k} + \cdot\cdot\cdot + \binom{n}{n-1}x^{n-1}y^1 + \binom{n}{n}x^ny^0$$  
 &emsp;&emsp;但是更习惯的我们会交换下x和y的指数，写成如下的等价形式：  
