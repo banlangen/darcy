@@ -42,15 +42,15 @@ tags:
 &emsp;&emsp;这个问题用组合可就没有那么容易解答了，相对的，如果用生成函数，解答就会更容易理解和直观，对于苹果而言我们有三种选择方式，用多项式表达就是$$(x^0 + x^1 + x^2)$$，而其他的水果的选择方式不变，可以用二项式表达$$(x^0 + x^1)$$，所以这个问题的生成函数可以用$$(x^0 + x^1 + x^2)(x^0 + x^1)^3$$展开得到，于是有了$$(1 + x + x^2)(1 + x)^3 = 1 + 4x + 7x^2 + 7x^3 + 4x^4 + x^5$$，$$x^2$$的系数是7，所以一共有7种方法，为了说明这个答案的正确性，我们直接通过暴力方法进行核对。
 $$\begin{array}{*{20}{c}}
 \hline
-\vline 1&\vline& 2&\vline& 3&\vline& 4&\vline& 5\vline& \\
+\vline &1& \vline & 2&\vline& 3&\vline& 4&\vline& 5\vline& \\
 \hline
-\vline {}&\vline& {}&\vline& {}&\vline& {}&\vline& {}\vline& \\
+\vline &{}& \vline & {}&\vline& {}&\vline& {}&\vline& {}\vline& \\
 \hline
-\vline {}&\vline& {}&\vline& {}&\vline& {}&\vline& {}\vline& \\
+\vline &{}& \vline& {}&\vline& {}&\vline& {}&\vline& {}\vline& \\
 \hline
-\vline {}&\vline& {}&\vline& {}&\vline& {}&\vline& {}\vline& \\
+\vline &{}& \vline& {}&\vline& {}&\vline& {}&\vline& {}\vline& \\
 \hline
-\vline {}&\vline& {}&\vline& {}&\vline& {}&\vline& {}\vline& 
+\vline &{}& \vline& {}&\vline& {}&\vline& {}&\vline& {}\vline& 
 \hline
 \end{array}$$
 
