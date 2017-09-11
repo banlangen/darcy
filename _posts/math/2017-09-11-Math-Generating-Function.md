@@ -18,7 +18,9 @@ tags:
 #### Description
 
 >[生成函数(Generating Function)](https://en.wikipedia.org/wiki/Generating_function), 定义如下：  
-&emsp;&emsp;In mathematics, the term generating function is used to describe an infinite sequence of numbers (an) by treating them as the coefficients of a series expansion. The sum of this infinite series is the generating function. Unlike an ordinary series, this formal series is allowed to diverge, meaning that the generating function is not always a true function and the "variable" is actually an indeterminate. Generating functions were first introduced by Abraham de Moivre in 1730, in order to solve the general linear recurrence problem.[1] One can generalize to formal series in more than one indeterminate, to encode information about arrays of numbers indexed by several natural numbers.
+&emsp;&emsp;In mathematics, the term generating function is used to describe an infinite sequence of numbers $$(a_n)$$ by treating them as the coefficients of a series expansion. The sum of this infinite series is the generating function. Unlike an ordinary series, this formal series is allowed to diverge, meaning that the generating function is not always a true function and the "variable" is actually an indeterminate. 
+
+在数学中为了研究一个无限序列{$$a_n$$}，于是将这个序列的每一个元素对应带一个多项式里面的系数，这个多项式就是我们现在讨论的生成函数，为什么这么做？我的粗浅理解是想通过多项式对这个序列的行为进行逼近，使得对序列的讨论可以转换到对多项式的讨论，如果你还记得微积分的话，你应该会知道泰勒展开式，泰勒展开式其实就是使用多项式对一个函数进行逼近，从而将对这个函数的问题的讨论转换到对多项式的讨论上，生成函数应该也带有同样的意味。那为什么选择多项式而不是其他的东东进行逼近？这是因为多项式是当时人们最能理解研究最深入的一个领域，这么做其实也是对问题化繁为简的一个手段。
 
 #### Threorem statement
 
