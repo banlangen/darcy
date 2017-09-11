@@ -20,7 +20,9 @@ tags:
 >[生成函数(Generating Function)](https://en.wikipedia.org/wiki/Generating_function), 定义如下：  
 &emsp;&emsp;In mathematics, the term generating function is used to describe an infinite sequence of numbers $$(a_n)$$ by treating them as the coefficients of a series expansion. The sum of this infinite series is the generating function. Unlike an ordinary series, this formal series is allowed to diverge, meaning that the generating function is not always a true function and the "variable" is actually an indeterminate. 
 
-在数学中为了研究一个无限序列{$$a_n$$}，于是将这个序列的每一个元素对应带一个多项式里面的系数，这个多项式就是我们现在讨论的生成函数，为什么这么做？我的粗浅理解是想通过多项式对这个序列的行为进行逼近，使得对序列的讨论可以转换到对多项式的讨论，如果你还记得微积分的话，你应该会知道泰勒展开式，泰勒展开式其实就是使用多项式对一个函数进行逼近，从而将对这个函数的问题的讨论转换到对多项式的讨论上，生成函数应该也带有同样的意味。那为什么选择多项式而不是其他的东东进行逼近？这是因为多项式是当时人们最能理解研究最深入的一个领域，这么做其实也是对问题化繁为简的一个手段。
+解释下这段英文描述。在数学中为了研究一个无限序列{$$a_n$$}，于是将这个序列的每一个元素对应带一个多项式里面的系数，这个多项式就是我们现在讨论的生成函数，为什么这么做？我的粗浅理解是想通过多项式对这个序列的行为进行逼近，使得对序列的讨论可以转换到对多项式的讨论，如果你还记得微积分的话，你应该会知道泰勒展开式，泰勒展开式其实就是使用多项式对一个函数进行逼近，从而将对这个函数的问题的讨论转换到对多项式的讨论上，生成函数应该也带有同样的意味。那为什么选择多项式而不是其他的东东进行逼近？这是因为多项式是当时人们理解研究最深入的一个领域，这么做其实也是对问题化繁为简（或者说再次抽象）的一个手段。我们可以看到在后面讨论数学中的一个神奇序列Catalan Number的时候，我们只有通过生成函数，才能得到符合数理逻辑的代数证明（这种证明抛开了问题所处的上下文环境，是一个纯粹的符号和代数角度的更通用的证明）。如果没有生成函数，我们只能结合具体问题给出几何上的具体分析，这并是一个“放之四海皆准”的证明方法。
+
+英文描述中还提到一个重要的事实，生成函数是允许发散的，这是跟泰勒展开式的一个重要区别，泰勒展开式既然是用多项式进行逼近的，所以该多项式必须是收敛的，也就是说只有这个多项式的余项是个高阶无穷小，那么泰勒展开式才是成立的，生成函数没有这个要求，这也是可以理解的，毕竟生成函数是离散数学领域的概念，都不连续何谈收敛？
 
 #### Threorem statement
 
