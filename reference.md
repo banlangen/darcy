@@ -71,6 +71,7 @@ abbr {text-decoration: none;}
 <ol class="rounded-list">
 <li><a href="http://xiaokedada.com/" target="_blank">小可嗒嗒的博客</a></li>
 <li><a href="http://ghmagical.com/" target="_blank">TG的博客</a></li>
+<li><a href="http://omegaxy.com/blog/archives.html" target="_blank">Bumble Bee</a></li>
 </ol>
 <hr><h4 class="btn btn-info btn-lg">各大公司的前端站点</h4><hr>
 <ol class="rectangle-list">
