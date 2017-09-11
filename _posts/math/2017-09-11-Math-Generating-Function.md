@@ -54,6 +54,12 @@ $$\begin{array}{*{20}{c}}
 \hline
 \end{array}$$
 
+$$\begin{array}{c|c} 
+\begin{bmatrix} 2 &3 \\ 4 & 5 \end{bmatrix} 
+& 
+\begin{bmatrix} 7\\13 \end{bmatrix} 
+end{array}$$
+
 #### Comments
 
 - [注1]：中国大陆的教科书里面将组合（排列也是如此）的n中取k的情况标记为$$C_n^k$$，这与国际上的标注法是相反的，此处采用的是国际标注法。同时还需要注意的是排列的标记在国际上是P取自英文permutation，中国大陆的教科书中用的标记是A。此博客完全使用国际标注法。
