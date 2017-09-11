@@ -37,12 +37,7 @@ $$(x + y) ^ n = \sum\limits_{k=0}^n\binom{n}{k}x^{(n - k)}y^k = \sum\limits_{k=0
 &emsp;&emsp;那如果是$$(a + b)^3$$呢?方便说明我们不用幂指数表示。  
 &emsp;&emsp;$$(a + b)(a + b)(a + b) = aaa + aab + aba + baa + bba + bab + abb + bbb$$
 $${(x + y)^n} = \sum\limits_{k = 0}^n {\left( \begin{array}{c}
-n\\
-k
-\end{array} \right)} {x^{(n - k)}}{y^k} = \sum\limits_{k = 0}^n {\left( \begin{array}{c}
-n\\
-k
-\end{array} \right)} {x^k}{y^{(n - k)}}$$
+n\\k\end{array} \right)} {x^{(n - k)}}{y^k} = \sum\limits_{k = 0}^n {\left( \begin{array}{c}n\\k\end{array} \right)} {x^k}{y^{(n - k)}}$$
 
 
 #### Solution
