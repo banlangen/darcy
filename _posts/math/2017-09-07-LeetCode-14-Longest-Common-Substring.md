@@ -32,10 +32,10 @@ $$(x + y) ^ n = \sum\limits_{k=0}^n\binom{n}{k}x^{(n - k)}y^k = \sum\limits_{k=0
 &emsp;&emsp;现在我们用示例来说明以上公式的含义与使用规则。
 
 &emsp;&emsp;首先需要说明的是$$C_k^n = \binom{n}{k}$$，也就是二项式系数其实是一个组合。但为何二项式展开和组合有关系？这是可以通过数学归纳法来证明的，这个地方我并不想展开，因为我们其实完全没有必要知道这个关系的数学证明过程，我们只需要知道应该如何理解这个关系。  
-&emsp;&emsp;大家肯定都知道$$(a + b)^2$$应该如何计算，我们有公式$$(a + b)^2 = a^2 + 2ab + b^2$$，其中的2ab是由于$$(a + b)(a + b)$$的展开过程中产生了1个ab，和1个ba，ab和ba是相同的，所以合并之后就变成了2ab，也就是有以下的推导过程:  
-&emsp;&emsp;$$(a + b)(a + b) = a^2 + ab + ba + b^2$$  
-&emsp;&emsp;那如果是$$(a + b)^3$$呢?方便说明我们不用幂指数表示。  
-&emsp;&emsp;$$(a + b)(a + b)(a + b) = aaa + {\color{red}{aab + aba + baa}} + bba + bab + abb + bbb$$
+&emsp;&emsp;大家肯定都知道$$(x + y)^2$$应该如何计算，我们有公式$$(x + y)^2 = x^2 + 2xy + y^2$$，其中的2xy是由于$$(x + y)(x + y)$$的展开过程中产生了1个xy，和1个yx，xy和yx是相同的，所以合并之后就变成了2xy，也就是有以下的推导过程:  
+&emsp;&emsp;$$(x + y)(x + y) = x^2 + xy + yx + y^2$$  
+&emsp;&emsp;那如果是$$(x + y)^3$$呢?方便说明我们不用幂指数表示。  
+&emsp;&emsp;$$(x + y)(x + y)(x + y) = xxx + {\color{red}{xxy + xyx + yxx}} + yyx + yxy + xyy + yyy$$
 
 
 #### Solution
