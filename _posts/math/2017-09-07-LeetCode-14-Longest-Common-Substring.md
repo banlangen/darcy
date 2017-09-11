@@ -34,8 +34,8 @@ $$(x + y) ^ n = \sum\limits_{k=0}^n\binom{n}{k}x^{(n - k)}y^k = \sum\limits_{k=0
 &emsp;&emsp;首先需要说明的是$$C_k^n = \binom{n}{k}$$，也就是二项式系数其实是一个组合。但为何二项式展开和组合有关系？这是可以通过数学归纳法来证明的，这个地方我并不想展开，因为我们其实完全没有必要知道这个关系的数学证明过程，我们只需要知道应该如何理解这个关系。  
 &emsp;&emsp;大家肯定都知道$$(x + y)^2$$应该如何计算，我们有公式$$(x + y)^2 = x^2 + 2xy + y^2$$，其中的2xy是由于$$(x + y)(x + y)$$的展开过程中产生了1个xy，和1个yx，xy和yx是相同的，所以合并之后就变成了2xy，也就是有以下的推导过程:  
 &emsp;&emsp;$$(x + y)(x + y) = x^2 + xy + yx + y^2$$  
-&emsp;&emsp;那如果是$$(x + y)^3$$呢?
-&emsp;&emsp;$$(x + y)(x + y)(x + y) = xxx + {\color{red}{xxy + xyx + yxx}} + yyx + yxy + xyy + yyy$$
+&emsp;&emsp;那如果是$$(x + y)^3$$呢?  
+&emsp;&emsp;$$(x + y)(x + y)(x + y) = xxx + {\color{red}{xxy + xyx + yxx}} + yyx + yxy + xyy + yyy$$  
 &emsp;&emsp;红色部分一共有3个，写成幂形式也就是$$3x^2 + y$$，但是为了方便说明我们不用幂表示。我们现在就来看看这个红色部分是如何形成的，这里我们就用组合的概念来思考，为了方便说明我们进行下标注$$(x + y)^(a)(x + y)^(b)(x + y)^(c)$$
 
 #### Solution
