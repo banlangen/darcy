@@ -10,7 +10,7 @@ tags:
 * content
 {:toc}
 
-二项式定理描述了二项式的幂的代数展开，其中的二项式系数（Binomial Coefficient）更是应用广泛。
+二项式定理描述了二项式的幂的代数展开，其中的二项式系数（Binomial Coefficient）更是应用广泛，本文原创，转载请标明出处。
 
 <!-- more -->
 
