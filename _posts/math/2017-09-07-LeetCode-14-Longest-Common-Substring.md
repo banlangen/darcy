@@ -14,7 +14,7 @@ tags:
 
 <!-- more -->
 
-## Binomial theorem
+## Binomial Theorem
 
 #### Description
 
