@@ -2,10 +2,9 @@
 layout: post
 title: "Generating Function"
 date: 2017-09-11 19:00:00 +0800 
-categories: 
-    - Mathematics 
-    - DiscreteMathematics
+category: 数学
 tags: 
+     - Discrete Mathematics
 ---
 * content
 {:toc}
