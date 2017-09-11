@@ -2,7 +2,6 @@
 layout: post
 title: "Binomial Theorem"
 date: 2017-09-10 19:00:00 +0800 
-category: 数学
 categories: 
     - Mathematics 
     - Algebra
