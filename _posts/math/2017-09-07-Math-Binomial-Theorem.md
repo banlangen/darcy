@@ -47,7 +47,7 @@ $$(x + y) ^ n = \sum\limits_{k=0}^n\binom{n}{k}x^{n-k}y^k = \sum\limits_{k=0}^n{
 
 #### Formulae
 
-&emsp;&emsp;$$x^{n-k}y^k$$的系数的计算公式用阶乘的方式表述如下： 
+&emsp;&emsp;$$x^{n-k}y^k$$的系数的计算公式用阶乘的方式表述如下：  
 &emsp;&emsp;$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$  
 &emsp;&emsp;也可以用非阶乘的方式表述：  
 &emsp;&emsp;$$\binom{n}{k} = \frac{n(n-1)\cdot\cdot\cdot(n-k+1)}{k(k-1)\cdot\cdot\cdot1} = \prod\limits_{l=1}^{k}{\frac{n-l+1}{l}}$$
