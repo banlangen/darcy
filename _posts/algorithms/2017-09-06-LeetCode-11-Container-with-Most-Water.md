@@ -62,7 +62,7 @@ public:
         vector<string> X = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
         vector<string> I = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"}
 
-        string res = M[n / 1000] + C[n % 1000 / 100] + X[n % 100 / 10] + I[n % 10];
+        string res = M[n / 1000] + C[n % 1000 / 100] + X[n % 100 / 10] + I[n %10];
         return res;
     } 
 };
