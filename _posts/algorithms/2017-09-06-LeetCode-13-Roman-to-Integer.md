@@ -27,8 +27,7 @@ tags:
 ##### recursive
 
 罗马数字的基本元素是  
-$$
-\begin{array}{c|c} 
+$$\begin{array}{|c|c|} 
 \hline
 I & 1 \\
 \hline
@@ -44,8 +43,7 @@ D & 500 \\
 \hline
 M & 1000 \\
 \hline 
-\end{array}
-$$
+\end{array}$$
 
 
 ##### no-recursive
