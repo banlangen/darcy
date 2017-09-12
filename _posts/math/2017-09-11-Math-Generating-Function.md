@@ -17,6 +17,8 @@ tags:
 
 #### Description
 
+生成函数是一个看似很难，实际很简单的数学工具，可以用他来解决一大系列的排列组合的问题。
+
 >[生成函数(Generating Function)](https://en.wikipedia.org/wiki/Generating_function), 定义如下：  
 &emsp;&emsp;In mathematics, the term generating function is used to describe an infinite sequence of numbers $$(a_n)$$ by treating them as the coefficients of a series expansion. The sum of this infinite series is the generating function. Unlike an ordinary series, this formal series is allowed to diverge, meaning that the generating function is not always a true function and the "variable" is actually an indeterminate. 
 
@@ -68,8 +70,11 @@ $$\begin{array}{|l|c|}
 
 >如果店家告诉你，他家的树莓派是成对卖的，那又有多少种配对方法呢? 
 
-&emsp;&emsp;这种情况下，我们的树莓馅饼的选择方法只能是$$(x^0 + x^2 + x^4)$$，所以最后的生成函数是：
+&emsp;&emsp;这种情况下，我们的树莓馅饼的选择方法只能是$$(x^0 + x^2 + x^4)$$，所以最后的生成函数如下，所以只有4中配法。
 $$(1 + x^1 + x^2 + x^3)(1 + x^1 + x^2)(1 + x^2 + x^4) = 1 + 2x + 4x^2 + 5x^3 + 6x^5 + 5x^6 + 4x^7 + 2x^8 + x^9)$$
+
+&emsp;&emsp;上面的四个例子展示了生成函数的魔力，使用组合我们可以算出从N个不同物品中挑选R个物品的方法，但是如果这些物件并未两两不同，而你又需要中这些相同的物品中取出不定数量的物件，生成函数就是一个很好的选择。
+
 
 #### Comments
 
