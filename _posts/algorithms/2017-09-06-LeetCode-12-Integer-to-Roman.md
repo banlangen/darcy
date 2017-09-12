@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Leetcode 13. Roman to Integer"
+title: "Leetcode 12. Integer to Roman"
 date: 2017-09-06 19:00:00 +0800 
 categories: 算法
-tags:
-    - others 
+tags: 
+    - dfs
+    - rcr2nonrcrs
 ---
 * content
 {:toc}
