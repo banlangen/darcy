@@ -54,4 +54,4 @@ public:
 
 #### Time Complexity
 
-这道题的时间复杂度是O(1);
+这道题的时间复杂度是O(n)。
