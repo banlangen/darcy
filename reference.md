@@ -73,6 +73,7 @@ abbr {text-decoration: none;}
 <li><a href="http://ghmagical.com/" target="_blank">TG的博客</a></li>
 <li><a href="http://omegaxy.com/blog/archives.html" target="_blank">Bumble Bee</a></li>
 <li><a href="https://yihui.name/">Yihui Xie</a></li>
+<li><a href="http://longqian.me">LongQian</a></li>
 </ol>
 <hr><h4 class="btn btn-info btn-lg">各大公司的前端站点</h4><hr>
 <ol class="rectangle-list">
