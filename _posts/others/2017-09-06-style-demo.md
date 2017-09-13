@@ -16,7 +16,7 @@ Demo only
 ## Font
 
 <head>
-<style type="text/css">
+<style>
 @font-face {
  font-family: BorderWeb;
  src:url(BORDERW0.eot);
