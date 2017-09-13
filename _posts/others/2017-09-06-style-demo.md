@@ -15,6 +15,7 @@ Demo only
 
 ## Font
 
+<div>
 <style scoped>
 @font-face {
  font-family: BorderWeb;
@@ -160,3 +161,4 @@ a { FONT-SIZE: 10px; COLOR: black; FONT-FAMILY: Verdana; TEXT-DECORATION: none }
         </tr>
     </tbody>
 </table>
+<div>
