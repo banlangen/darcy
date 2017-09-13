@@ -15,8 +15,7 @@ Demo only
 
 ## Font
 
-<head>
-<style>
+<style scoped>
 @font-face {
  font-family: BorderWeb;
  src:url(BORDERW0.eot);
@@ -39,7 +38,6 @@ Demo only
 .corner { FONT-SIZE: 70px; COLOR: black; FONT-FAMILY: "BorderWeb" }
 a { FONT-SIZE: 10px; COLOR: black; FONT-FAMILY: Verdana; TEXT-DECORATION: none }
 </style>
-</head>
 
 <table cellspacing="0" cellpadding="0" border="0">
     <tbody>
