@@ -61,7 +61,7 @@ isMatch("aab", "c*a*b") → true
 .corner { FONT-SIZE: 70px; COLOR: black; FONT-FAMILY: "BorderWeb" }
 a { FONT-SIZE: 10px; COLOR: black; FONT-FAMILY: Verdana; TEXT-DECORATION: none }
 </style>
-</head>
+
 <body>
 <table cellspacing="0" cellpadding="0" border="0">
     <tbody>
