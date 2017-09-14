@@ -57,7 +57,6 @@ isMatch("aab", "c\*a\*b") → true
 &emsp;&emsp;如果说动态规划有一种回顾过去的意味，那么深度优先遍历则带有一种探索与回溯的意味，探索意味着关注的是当前与未来，如果在探索过程中出现失误，随即进行回退，根据这个思路，用头脑风暴表现如下  
 ![leetcode10_13](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_13.png)
 
-
 #### Code
 
 #####  Dynamic Programming
