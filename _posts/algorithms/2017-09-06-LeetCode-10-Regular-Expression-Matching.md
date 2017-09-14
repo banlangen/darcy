@@ -42,7 +42,7 @@ isMatch("aab", "c*a*b") → true
 
 mmp文件下载链接[download mmp](http://ovwkcbdpf.bkt.clouddn.com/mindjet/leetcode10.mmap 'click here to download')
 
-&emsp;&emsp;动态规划就是通过递推关系找到将当前问题简化为规模更小问题的途径，然后再通过初始化状态，逐渐衍生出问题答案的过程。本题最重要的思路就是构建一个matrix二维数组，数组x轴上的[s, 0, 1, 2, 3]代表与数组s[0, 1, 2, 3]的对应关系，数组y轴上的[p, 0, 1, 2, 3, 4]代表与数组p[0, 1, 2, 3, 4]的对应关系，我们需要做的就是
+&emsp;&emsp;动态规划就是通过递推关系找到将当前问题简化为规模更小问题的途径，然后再通过初始化状态，逐渐衍生出问题答案的过程。本题最重要的思路就是构建一个matrix二维数组，数组x轴上的[s, 0, 1, 2, 3]代表与数组s[0, 1, 2, 3]的对应关系，数组y轴上的[p, 0, 1, 2, 3, 4]代表与数组p[0, 1, 2, 3, 4]的对应关系，我们需要做的就是将这个二维数组填充  
 ![leetcode10_02](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_02.png)
 ![leetcode10_02](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_02.png)
 &emsp;&emsp;，
