@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Leetcode 08. String to Integer"
-date: 2017-09-06 19:00:00 +0800 
+title: "Leetcode 08. String to Integer(atoi)"
+date: 2017-09-05 19:00:00 +0800 
 categories: 算法
 tags: 
-    - div&mod
+    - others
 ---
 * content
 {:toc}
@@ -13,17 +13,16 @@ tags:
 
 <!-- more -->
 
-## Palindrome Number
+## String to Integer(atoi)
 
 #### Description
 
->Determine whether an integer is a palindrome. Do this without extra space.
+>Implement atoi to convert a string to an integer.
 
 #### Solution
 
-#####  Division & Modulus
-
-&emsp;&emsp;假设给定number是n位十进制数字，那么通过$$\frac{number}{10^n}$$可以得到number的最高位数字，而通过$${number}%{10}$$可以得到number的个位数字，然后通过$$(number-\frac{number}{10^n}) \cdot 10^n$$可以去掉number的最高位数字。而$$\frac{number}{10}$$可以去掉number的最低位数字。这就是该题的最主要思路。
+&emsp;&emsp;这个思路就是先判断正负号，然后根据后面的数值构建int型数值，特别要注意的是这个值很可能超过integer的可表示范围，为了防止溢出，我们需要用一个非常大的变量来存放可能的值，这个变量类型就是unsigned long long int可以表示的范围是[0, +18,446,744,073,709,551,615] 用语言已经很难描述这个值，大概是几千个亿个亿，绝对的天文数字，而这个值也是C++中int型中能表示的最大的整数范围，然后在输出的时候，再进行转换，整个思路用头脑风暴表示如下。  
+![leetcode08](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode08/leetcode08.png)
 
 #### Code
 
