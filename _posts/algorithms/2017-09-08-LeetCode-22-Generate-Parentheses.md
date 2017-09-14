@@ -116,7 +116,7 @@ public:
 
 #### Time Complexity
 
-这道题的时间复杂度的计算有点复杂，O(n * Cat(n)), Cat(n) 代表的是CATALAN数简单的说是指数级的时间复杂度，
+这道题的时间复杂度的计算有点复杂，O(n * Cat(n)), Cat(n) 代表的是catalan数，后面我会对catalan数进行解析。
 
 #### Video
 
