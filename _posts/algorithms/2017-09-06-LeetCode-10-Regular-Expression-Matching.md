@@ -45,9 +45,11 @@ isMatch("aab", "c*a*b") → true
 ![leetcode10_06](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_06.png)![leetcode10_07](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_07.png)  
 &emsp;&emsp;接着分别考虑s != "" && p == ""的情况和s == "" && p != ""的两种情况。当s != "" && p == ""时，这就相当于给了一个字符串，却没有给匹配规则，这个时候还要问是否和匹配规则一致，这种情况下我们是无法给出答案的，所以默认全为false，于是得到下左的状态。当s == "" && p != ""时，这种情况，就只有在类似于p == "a*"的情况下两者才会匹配，其他情况均为不匹配，由此得到下右的状态，到此初始化结束。  
 ![leetcode10_08](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_08.png)![leetcode10_09](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_09.png)  
-&emsp;&emsp;matrix的剩余部分就应该由递推公式来推导了，递推公式的规则我采用头脑风暴的形式进行说明，因为单靠语言已经很难表达出其中的逻辑关系，各位看官如果觉得图片不清晰，可以右键选择view image这样可以在单独的浏览器窗口中查看下图。  
-![leetcode10_01](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_10.png)
-
+&emsp;&emsp;matrix的剩余部分就应该由递推公式来推导了，而matrix数组的填充方向如下图所示，先自左向右，然后再自上而下。  
+![leetcode10_12](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_12.png)  
+&emsp;&emsp;递推公式的规则我采用头脑风暴的形式进行说明，因为单靠语言已经很难表达出其中的逻辑关系，各位看官如果觉得图片不清晰，可以右键选择view image这样可以在单独的浏览器窗口中查看下图。  
+![leetcode10_01](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_10.png)  
+&emsp;&emsp;最终我们得到结果如下  
 
 
 #### Code
@@ -55,23 +57,7 @@ isMatch("aab", "c*a*b") → true
 ```cpp
 class Solution {
 public:
-    int maxArea(vector<int> &height) {
-        int area; 
-        int left = 0;
-        int right = height.size() - 1;
-        while (left < right) {
-            area = max(area, min(height[left], height[right]) * (right - left));
-            if (height[left] < height[right]) {
-                left++;
-            } else if (height[left] > height[right]) {
-                right--;
-            } else {
-                left++;
-                right--;
-            }
-        }
-        return area;
-    }
+    vector<vector<bool>> 
 };
 ```
 
