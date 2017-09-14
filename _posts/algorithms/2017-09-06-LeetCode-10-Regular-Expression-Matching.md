@@ -47,7 +47,7 @@ mmp文件下载链接[download mmp](http://ovwkcbdpf.bkt.clouddn.com/mindjet/lee
 ![leetcode10_03](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_03.png)  
 &emsp;&emsp;为了方便说明，以s = "abcd", p = "a\*.cd"为例，定义出二维矩阵如下左，初始化的第一步就是考虑s == "" 和 p == ""的情况，也就是matrix[0][0]，此时应该认为两者是匹配的，所以matrix[0][0] = true，矩阵转换成为下右的状态。 
 ![leetcode10_06](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_06.png)![leetcode10_07](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_07.png)  
-&emsp;&emsp;接着分别考虑s != "" 而p == ""的情况和s == "" 而 p != ""的两种情况。当s != "" 而 p == ""时，这就相当于给了一个字符串，却没有给匹配规则，这个时候还要问是否和匹配规则一致，这种情况下我们是无法给出答案的，所以默认全为false，于是得到下左的状态。当s == "" 而p != ""时，这种情况，就只有在类似于p == "a*"的情况下两者才会匹配，其他情况均为不匹配，由此得到下右的状态。  
+&emsp;&emsp;接着分别考虑s != "" && p == ""的情况和s == "" && p != ""的两种情况。当s != "" && p == ""时，这就相当于给了一个字符串，却没有给匹配规则，这个时候还要问是否和匹配规则一致，这种情况下我们是无法给出答案的，所以默认全为false，于是得到下左的状态。当s == "" && p != ""时，这种情况，就只有在类似于p == "a*"的情况下两者才会匹配，其他情况均为不匹配，由此得到下右的状态。  
 ![leetcode10_08](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_08.png)![leetcode10_09](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_09.png)  
 
 
