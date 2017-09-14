@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Leetcode 09. Palindrome Number"
-date: 2017-09-05 19:00:00 +0800 
+title: "Leetcode 08. String to Integer"
+date: 2017-09-06 19:00:00 +0800 
 categories: 算法
 tags: 
     - div&mod
@@ -23,7 +23,7 @@ tags:
 
 #####  Division & Modulus
 
-&emsp;&emsp;假设给定number是n位十进制数字，那么通过$$\frac{number}{10^n}$$可以得到number的最高位数字，而通过$${number}\%{10}$$可以得到number的个位数字，然后通过$$(number-\frac{number}{10^n}) \cdot 10^n$$可以去掉number的最高位数字。而$$\frac{number}{10}$$可以去掉number的最低位数字。这就是该题的最主要思路。
+&emsp;&emsp;假设给定number是n位十进制数字，那么通过$$\frac{number}{10^n}$$可以得到number的最高位数字，而通过$${number}%{10}$$可以得到number的个位数字，然后通过$$(number-\frac{number}{10^n}) \cdot 10^n$$可以去掉number的最高位数字。而$$\frac{number}{10}$$可以去掉number的最低位数字。这就是该题的最主要思路。
 
 #### Code
 
