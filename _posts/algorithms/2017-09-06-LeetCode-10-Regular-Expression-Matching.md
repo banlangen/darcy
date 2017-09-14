@@ -50,7 +50,7 @@ isMatch("aab", "c*a*b") → true
 &emsp;&emsp;递推公式的规则我采用头脑风暴的形式进行说明，因为单靠语言已经很难表达出其中的逻辑关系，各位看官如果觉得图片不清晰，可以右键选择view image这样可以在单独的浏览器窗口中查看下图。  
 ![leetcode10_01](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_10.png)  
 &emsp;&emsp;最终我们得到结果如下  
-
+![leetcode10_11](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_11.png)  
 
 #### Code
 
