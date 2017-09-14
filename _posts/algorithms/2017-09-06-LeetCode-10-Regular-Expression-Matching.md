@@ -57,7 +57,32 @@ isMatch("aab", "c\*a\*b") → true
 ```cpp
 class Solution {
 public:
-    vector<vector<bool>> 
+    bool isMatch(string s, string p) {
+        vector<vector<bool>> matrix(p.length() + 1, vecotr<bool>(s.length() + 1, false));
+        matrix[0][0] = true;
+        //初始化matrix[i][0];
+        for (int i = 0; i < p.length(); i++) {
+            if (p[i] == '*') {
+                matrix[i + 1][0] = matrix[i - 1][0];
+            }
+        }
+        for (int i = 1; i < p.lenghth() + 1; i++) {
+            for (int j = 1; j < s.length() + 1; j++) {
+                if (p[i - 1] == '.') {
+                    matrix[i][j] = matrix[i - 1][j - 1];
+                } else if (p[i - 1] == '*') {
+                    if (p[i - 2] != s[j - 1] && p[i - 2] != '.') {
+                        matrix[i][j] = matrix[i - 2][j];
+                    } else {
+                        matrix[i][j] = matrix[i - 2][j] || matrix[i - 1][j] || matrix[i][j - 1];
+                    }
+                } else {
+                    matrix[i][j] = matrix[i - 2][j] || matrix[i - 1][j] || matrix[i][j - 1];
+                }
+            }
+        }
+        return matrix[p.lenght()][s.length()];
+    }
 };
 ```
 
