@@ -131,4 +131,4 @@ public:
 
 #### Time Complexity
 
-&emsp;&emsp;动态规划解法的时间复杂度是O(m * n)，m，n分别是s和p的字符串长度，而深度优先遍历算法的时间复杂度，似乎是O(m + n)，虽然 return isMatch(s.substr(1), p) || isMatch(s, p.substr(2))；似乎有回溯的过程，但是回溯的次数一定没有n次，所以感觉勉强应该是O(m + n)的，如有错误，还请指正。
+&emsp;&emsp;动态规划解法的时间复杂度是O(m * n)，m，n分别是s和p的字符串长度，而深度优先遍历算法的时间复杂度，似乎是O(m + n)，虽然 return isMatch(s.substr(1), p) \|\| isMatch(s, p.substr(2))；似乎有回溯的过程，但是回溯的次数一定没有n次，所以感觉勉强应该是O(m + n)的，如有错误，还请指正。
