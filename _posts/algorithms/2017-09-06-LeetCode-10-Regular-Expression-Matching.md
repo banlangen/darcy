@@ -5,6 +5,7 @@ date: 2017-09-06 19:00:00 +0800
 categories: 算法
 tags: 
     - dp
+    - dfs
 ---
 * content
 {:toc}
@@ -52,7 +53,14 @@ isMatch("aab", "c\*a\*b") → true
 &emsp;&emsp;最终我们得到结果如下的结果，而我们的答案就在matrix[5][4]这个位置上，matrix[5][4] == true，所以我们可以知道字符串abcd和规则a\*.cd匹配。  
 ![leetcode10_11](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_11.png)  
 
+##### dfs
+&emsp;&emsp;如果说动态规划有一种回顾过去的意味，那么深度优先遍历则带有一种探索与回溯的意味，探索意味着关注的是当前与未来，如果在探索过程中出现失误，随即进行回退，根据这个思路，用头脑风暴表现如下  
+![leetcode10_13](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_13.png)
+
+
 #### Code
+
+#####  Dynamic Programming
 
 ```cpp
 class Solution {
@@ -82,6 +90,41 @@ public:
             }
         }
         return matrix[p.lenght()][s.length()];
+    }
+};
+```
+
+##### dfs
+
+```cpp
+class Solution {
+public:
+    /*
+    题意： 正则表达式匹配，'.'可以匹配任意字符，'*'可以匹配任意个(可以为0)'*'之前的字符
+    不考虑'*'的话，题目变成简单的匹配。考虑'*'，可能产生的情况有匹配0、1、2…个字符
+    因此可以使用递归或dp或其他方法解决
+    */
+    bool isMatch(string s, string p) {
+        if (s.length() == 0){
+            // s串匹配完合法的情况只有p为空，或是 "X*X*"的形式
+            if (p.length() & 1) return false;
+            else {
+                for (int i = 1; i < p.length(); i += 2) {
+                    if (p[i] != '*') return false;
+                }
+            }
+            return true;
+        }
+        if (p.length() == 0) return false;
+        if (p.length() > 1 && p[1] == '*') {
+            if (p[0] == '.' || s[0] == p[0]) {
+                return isMatch(s.substr(1), p) || isMatch(s, p.substr(2));
+            } else return isMatch(s, p.substr(2));
+        } else {
+            if (p[0] == '.' || s[0] == p[0]) {
+                return isMatch(s.substr(1), p.substr(1));
+            } else return false;
+        }
     }
 };
 ```
