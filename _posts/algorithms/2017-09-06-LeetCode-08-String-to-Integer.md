@@ -29,27 +29,36 @@ tags:
 ```cpp
 class Solution {
 public:
-    string isPalindrome(int x) {
-        if (x < 0) {
-            return false;
+    int myAtoi(string str) {
+        bool isNeg = false;
+        unsigned long long int ret = 0;
+        while (*str == ' ') {
+            str++;
         }
-        int div = 1; int num = x;
-        while (num / div >= 10) {
-            div *= 10;
+        if (!isdigit(*str) || *str != '+' || *str = '-') {
+            return 0;
         }
-        while (num != 0) {
-            int left = num / div;
-            int right = num % 10;
-            if (left != right) {
-                return false;
+        if (*str == '+' || *str == '-') {
+            if (!isdigit(*(str + 1))) {
+                return 0;
             }
-            num = (num - left * div) / 10;
-            div /= 100;
-        }  
-    } 
+            if (*str == '-') {
+                isNeg = true;
+                str++;
+            }
+        }
+        while (isdigit(*str)) {
+            ret = ret * 10 + (*str - '0');
+            if (ret > (unsigned long long int)INT_MAX) {
+                return isNeg ? INT_MIN : INT_MAX;
+            }
+            str++;
+        }
+        return isNeg ? -(int)res : (int)res;
+    }
 };
 ```
 
 #### Time Complexity
 
-这道题的时间复杂度是O(n)，n是number的位数;
+这道题的时间复杂度是O(n)，n是输入string的位数;
