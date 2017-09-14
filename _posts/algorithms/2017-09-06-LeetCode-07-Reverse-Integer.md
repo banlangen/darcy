@@ -24,7 +24,7 @@ Example2: x = -123, return -321
 
 #### Solution
 
-&emsp;&emsp;
+&emsp;&emsp;通过一个循环，通过number % 10 每次取数字的最后一位，并通过number / 10去除最后一位，将得到的最后一位数字通过\* 10的方式放到新数字的最高位上面。使用C++的时候需要考虑溢出问题。
 
 #### Code
 
@@ -32,7 +32,12 @@ Example2: x = -123, return -321
 class Solution {
 public:
     int reverse(int x) {
-        
+        long y = 0; 
+        while (x != 0) {
+            y = y * 10 + x % 10;
+            x /= 10;
+        }
+        return y;     
     }
 };
 };
@@ -40,4 +45,4 @@ public:
 
 #### Time Complexity
 
-这道题的时间复杂度是O(n)，n是输入string的位数;
+这道题的时间复杂度是O(n)，n是输入输入数字的位数;
