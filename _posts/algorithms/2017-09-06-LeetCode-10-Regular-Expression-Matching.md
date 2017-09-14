@@ -54,6 +54,7 @@ isMatch("aab", "c\*a\*b") → true
 ![leetcode10_11](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_11.png)  
 
 ##### dfs
+
 &emsp;&emsp;如果说动态规划有一种回顾过去的意味，那么深度优先遍历则带有一种探索与回溯的意味，探索意味着关注的是当前与未来，如果在探索过程中出现失误，随即进行回退，根据这个思路，用头脑风暴表现如下  
 ![leetcode10_13](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode10/leetcode10_13.png)
 
@@ -130,4 +131,4 @@ public:
 
 #### Time Complexity
 
-这道题的时间复杂度是O(n)。
+&emsp;&emsp;动态规划解法的时间复杂度是O(m * n)，m，n分别是s和p的字符串长度，而深度优先遍历算法的时间复杂度，似乎是O(m + n)，虽然 return isMatch(s.substr(1), p) || isMatch(s, p.substr(2))；似乎有回溯的过程，但是回溯的次数一定没有n次，所以感觉勉强应该是O(m + n)的，如有错误，还请指正。
