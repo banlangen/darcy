@@ -30,6 +30,7 @@ For k = 3, you should return: 3->2->1->4->5
 #### Solution
 
 &emsp;&emsp;链表内部的翻转，要求内存空间为常数，所以不能使用数组或者vector，链表操作的话，特别是这种会改变链表结构的情况，都会使用dummy node，
+![leetcode25](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode25/leetcode25.png)
 
 #### Code
 
@@ -41,7 +42,32 @@ public:
     ListNode* reverseKGroup(ListNode* head, int k) {
         ListNode *dummy = new ListNode(0);
         dummy->next = head;
+        head = dummy;
+        for (;;) {
+            int res_node = 0;
+            ListNode *last = head;
+            for (int i = 0; i < k; i++) {
+                if (last == NULL) {
+                    break; 
+                }
+                res_node++;
+                last = last->next;
+            }
+            if (res_node < k) {
+                break;
+            }
 
+            ListNode *first = head->next;
+
+            for (int j = 0; j < k; j++) {
+                int index = k - 1 - j;
+                ListNode *aim = first;
+                while (index--) {
+
+                }
+            }
+
+        }
         return dummy->next;
     }
 };
