@@ -4,7 +4,7 @@ title: "Leetcode 25. Reverse Nodes in k Group"
 date: 2017-09-14 19:00:00 +0800 
 categories: 算法
 tags: 
-    - ds-linkedlist
+    - ds-array
 ---
 * content
 {:toc}
@@ -27,8 +27,7 @@ tags:
 
 #### Solution
 
-&emsp;&emsp;链表内部的翻转，要求内存空间为常数，所以不能使用数组或者vector，链表操作的话，特别是这种会改变链表结构的情况，都会使用dummy node。本题的思路是先找到要翻转数列中的最后一个节点，然后通过循环由后向前修改每个节点的next域，在整个过程中需要妥善保存first 和last节点的地址，first是需要翻转链表的首节点，last是需要翻转链表最后一个节点的下一个节点。在整个翻转过程中想清楚指针需要走多少步可以到目标指针。  
-![leetcode25](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode25/leetcode25.png)
+&emsp;&emsp;从头到尾遍历数组，如果元素值不等于给定值，计数加一。
 
 #### Code
 
@@ -36,7 +35,13 @@ tags:
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
-        
+        int ret = 0;
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] != val) {
+                nums[ret++] = nums[i];
+            }
+        }
+        return ret;
     }
 };
 ```
@@ -44,3 +49,4 @@ public:
 
 #### Time Complexity
 
+O(n);
