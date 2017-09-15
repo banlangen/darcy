@@ -34,8 +34,6 @@ For k = 3, you should return: 3->2->1->4->5
 
 #### Code
 
-##### recursive
-
 ```cpp
 class Solution {
 public:
@@ -45,7 +43,7 @@ public:
         head = dummy;
         for (;;) {
             int res_node = 0;
-            ListNode *last = head;
+            ListNode *last = head->next;
             for (int i = 0; i < k; i++) {
                 if (last == NULL) {
                     break; 
@@ -63,10 +61,12 @@ public:
                 int index = k - 1 - j;
                 ListNode *aim = first;
                 while (index--) {
-
+                    aim = aim->next;
                 }
+                head->next = aim;
+                head = aim;
             }
-
+            head->next = last;
         }
         return dummy->next;
     }
