@@ -29,7 +29,7 @@ For k = 3, you should return: 3->2->1->4->5
 
 #### Solution
 
-&emsp;&emsp;链表内部的翻转，要求内存空间为常数，所以不能使用数组或者vector，链表操作的话，特别是这种会改变链表结构的情况，都会使用dummy node，
+&emsp;&emsp;链表内部的翻转，要求内存空间为常数，所以不能使用数组或者vector，链表操作的话，特别是这种会改变链表结构的情况，都会使用dummy node。本题的思路是先找到要翻转数列中的最后一个节点，然后通过循环由后向前修改每个节点的next域，在整个过程中需要妥善保存first 和last节点的地址，first是需要翻转链表的首节点，last是需要翻转链表最后一个节点的下一个节点。在整个翻转过程中想清楚指针需要走多少步可以到目标指针。  
 ![leetcode25](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode25/leetcode25.png)
 
 #### Code
@@ -76,8 +76,3 @@ public:
 
 #### Time Complexity
 
-这道题的时间复杂度的计算有点复杂，O(n * Cat(n)), Cat(n) 代表的是catalan数，后面我会对catalan数进行解析。
-
-#### Video
-
-<embed src='http://player.youku.com/player.php/sid/XMjkwMzEwNTAwNA==/v.swf' allowFullScreen='true' quality='high' width='800' height='600' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash' wmode="opaque">
