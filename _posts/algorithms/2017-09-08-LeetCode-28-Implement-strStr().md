@@ -89,6 +89,7 @@ while (i < needle.length()) {
 }
 ```
 &emsp;&emsp;以下视频用一个实例演示了执行过程。  
+
 <iframe height=498 width=510 src='http://player.youku.com/embed/XMzAyNzYzNjEzMg==' frameborder=0 'allowfullscreen'></iframe>
 
 #### Code
