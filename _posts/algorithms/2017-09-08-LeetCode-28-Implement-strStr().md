@@ -46,8 +46,9 @@ a & a & a & a \\
 ![leetcode26_02](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_02.png)  
 在得到了needle[i]之后，我们对i和j都自增一，再进行计算。  
 ![leetcode26_03](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_03.png)  
-&emsp;&emsp;之前我们假设needle[j] == needle[i]，那么如果两者不想同呢？
-![leetcode26_04](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_04.png)
+&emsp;&emsp;之前我们假设needle[j] == needle[i]，那么如果两者不想同呢？这个时候，根据定义，longest prefix suffix的长度就肯定不是j了，
+![leetcode26_04](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_04.png)  
+&emsp;&emsp;
 #### Code
 
 ```cpp
