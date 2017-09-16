@@ -46,7 +46,7 @@ a & a & a & a \\
 ![leetcode26_02](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_02.png)  
 在得到了needle[i]之后，我们对i和j都自增一，再进行计算。  
 ![leetcode26_03](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_03.png)  
-&emsp;&emsp;之前我们假设needle[j] == needle[i]，那么如果两者不想同呢？这个时候，根据定义，longest prefix suffix的长度就肯定不是j了，
+&emsp;&emsp;之前我们假设needle[j] == needle[i]，那么如果两者不想同呢？这个时候，根据定义，longest prefix suffix的长度就肯定不是j了，为了求得LPS[i]的正确值，我们需要意识到，needle[0] ~ needle[j - 1] == needle[i - j] ~ needle[i - 1]这个前提条件仍然成立，但是needle[j] != needle[i]的情况下，这个前提条件已经没有意义，那下一步我们需要做的就是找到needle[0] ~ needle[i - 1]的下一个最大的longest prefix suffix的长度，下图中表示为S，当我们找到之后，我们就需要更新j的值，然后再比较needle[j]和needle[i]，如果此时needle[i] == needle[j]那么LPS[i] = j + 1， 或者说是字符串S的长度 + 1。  
 ![leetcode26_04](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_04.png)  
 &emsp;&emsp;
 #### Code
