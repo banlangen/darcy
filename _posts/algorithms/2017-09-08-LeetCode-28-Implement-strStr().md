@@ -33,7 +33,7 @@ i & n & f & i & n & i & t & y \\
 \end{array}$$  
 &emsp;&emsp;由此展开，在下图中，如果问从下标0开始，长度为j的字符串的最后一个元素的下标是多少，你应该是知道是j - 1而不是j，而下标为j的字符是长度为j的字符的最后一个字符的下一个字符，在后面的讲解中如果你产生了一些疑问，我相信这段文字应该可以帮助到你。
 ![leetcode26_01](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_01.png)  
-&emsp;&emsp;KMP算法的实现建立在一个longest prefix suffix数组上，所以构建这个longest prefix suffix数组是KMP算法的第一步，那么什么是longeset prefix suffix数组？现在我们以LPS数组来代表longest prefix suffix数组，i代表LPS的下标，needle是我们的输入字符串，那么LPS[i]代表的是needle.substr(0, i + 1)(也就是说needle[0]~needle[i]所构成的字符串)中，既是longest proper prefix又是longest proper suffix的子字符串的长度，不明白什么意思？没关系，现在用实例来具体解释。  
+&emsp;&emsp;KMP算法的实现建立在一个longest prefix suffix数组上，所以构建这个longest prefix suffix数组是KMP算法的第一步，那么什么是longeset prefix suffix数组？现在我们以LPS数组来代表longest prefix suffix数组，i代表LPS的下标，needle是我们的输入字符串，那么LPS[i]代表的是needle.substr(0, i + 1)(也就是说needle[0]~needle[i]所构成的字符串)中，既是longest proper prefix又是longest proper suffix的子字符串的**长度**，不明白什么意思？没关系，现在用实例来具体解释。  
 &emsp;&emsp;有一个string : "abab"，那么它的proper prefixes就包括，"a"，"ab"，"aba"，同样的，它的proper suffixes就包括"b"，"ab"，"bab"，请注意，"abab"本身既不是proper prefix 也不是proper suffix，通过使用这个LPS数组保存到下标为i的字符为止的longest prefix suffix，对于"abab"而言，数组如下，所以LPS数组的内容是[0, 0, 1, 2]
 $$\begin{array}{|c|c|}
 \hline
@@ -54,7 +54,7 @@ a & a & a & a \\
 ![leetcode26_01](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_01.png)  
 &emsp;&emsp;接下来，如果needle[j] == needle[i]，那么我们可以知道这相当于在needle[0] ~ needle[j - 1] == needle[i - j] ~ needle[i - 1]的情况下，又知道needle[j] == needle[i]，那么很明显我们可以推导出，needle[0] ~ needle[j] == needle[i - j] ~ needle[i]，这个时候longest prefix suffix的长度就是j + 1，也就是说到needle[i]，longest prefix suffix的长度就是j + 1， 所以有LPS[i] = j + 1。  
 ![leetcode26_02](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_02.png)  
-在得到了needle[i]之后，我们对i和j都自增一，再进行计算。  
+&emsp;&emsp;在得到了needle[i]之后，我们对i和j都自增一，再进行计算。  
 ![leetcode26_03](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_03.png)  
 &emsp;&emsp;之前我们假设needle[j] == needle[i]，那么如果两者不想同呢？这个时候，根据定义，longest prefix suffix的长度就肯定不是j了，为了求得LPS[i]的正确值，我们需要意识到，needle[0] ~ needle[j - 1] == needle[i - j] ~ needle[i - 1]这个前提条件仍然成立，但是needle[j] != needle[i]的情况下，这个前提条件已经没有意义，那下一步我们需要做的就是找到needle[0] ~ needle[i - 1]的下一个最大的longest prefix suffix的长度，下图中表示为S，当我们找到之后，我们就需要更新j的值，然后再比较needle[j]和needle[i]，如果此时needle[i] == needle[j]那么LPS[i] = j + 1， 或者说是字符串S的长度 + 1。  
 ![leetcode26_05](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_05.png)  
@@ -64,7 +64,7 @@ a & a & a & a \\
 ![leetcode26_06](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_06.png)  
 &emsp;&emsp;也就是说其实这个S也就是needle[0] ~ needle[j - 1]的longest proper suffix， 而这个longest proper suffix的长度已经算出来了，就是LPS[j - 1]。
 ![leetcode26_07](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_07.png)  
-&emsp;&emsp;所以这个时候我们可以直接将j移动到S字符串的下一个字符，然后再次比较needle[j]与needle[i]，如果两者相等，那么LPS[i] = j + 1，如果两者不相等，那么继续重复刚才的步骤，寻找第三大proper prefix suffix
+&emsp;&emsp;所以这个时候我们可以直接将j移动到S字符串的最后一个字符的下一个字符，然后再次比较needle[j]与needle[i]，S字符串的最后一个字符的下一个字符的下标是多少？就是LPS[j - 1]（提醒：LPS中存放的是长度，然后再参考开篇提到的数组下标和长度的关系）如果两者相等，那么LPS[i] = j + 1，如果两者不相等，那么继续重复刚才的步骤，寻找第三大proper prefix suffix
 ![leetcode26_08](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_08.png)  
 根据上面的讨论代码可以总结为
 &emsp;&emsp;
