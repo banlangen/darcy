@@ -64,26 +64,33 @@ a & a & a & a \\
 ![leetcode26_06](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_06.png)  
 &emsp;&emsp;也就是说其实这个S也就是needle[0] ~ needle[j - 1]的longest proper suffix， 而这个longest proper suffix的长度已经算出来了，就是LPS[j - 1]。
 ![leetcode26_07](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_07.png)  
-&emsp;&emsp;所以这个时候我们可以直接将j移动到S字符串的最后一个字符的下一个字符，然后再次比较needle[j]与needle[i]，S字符串的最后一个字符的下一个字符的下标是多少？就是LPS[j - 1]（提醒：LPS中存放的是长度，然后再参考开篇提到的数组下标和长度的关系）如果两者相等，那么LPS[i] = j + 1，如果两者不相等，那么继续重复刚才的步骤，寻找第三大proper prefix suffix
+&emsp;&emsp;所以这个时候我们可以直接将j移动到S字符串的最后一个字符的下一个字符，然后再次比较needle[j]与needle[i]，S字符串的最后一个字符的下一个字符的下标是多少？就是LPS[j - 1]（提醒：LPS中存放的是长度，然后再参考开篇提到的数组下标和长度的关系）如果两者相等，那么LPS[i] = j + 1，如果两者不相等，那么继续重复刚才的步骤，寻找第三大proper prefix suffix，这个循环可以一直这么执行下去，要么我们找到合适的起点，使得needle[j] == needle[i]，要么继续循环，直到j == 0的时候，这说明实在找不到一个S使得S + needle[j] = S + needle[i]，所以这个时候LPS[i] = 0。 
 ![leetcode26_08](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_08.png)  
-根据上面的讨论代码可以总结为
-&emsp;&emsp;
+&emsp;&emsp;根据上面的讨论代码可以总结为
 ```cpp
-while (...) {
-    if (needle[j] != needle[i]) {
-        j = lps[j - 1];
+vector<int> lps(needle.length(), 0);
+int j = 0;
+int i = 1;
+lps[0] = 0;
 
-    }
+while (i < needle.length()) {
     if (needle[j] == needle[i]) {
         lps[i] = j + 1;
-        j = j + 1;
-        i = i + 1;
+        j++;
+        i++;
+    } else { // needle[j] != needle[i])
+        if (j != 0) {
+            j = lps[j - 1];
+        } else { // j == 0
+            lps[i] = 0;
+            i++;
+        }
     }
 }
-
 ```
 
 #### Code
+
 
 #### Time Complexity
 
