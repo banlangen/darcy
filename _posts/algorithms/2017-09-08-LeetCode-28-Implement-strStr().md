@@ -4,7 +4,7 @@ title: "Leetcode 28. Implement strStr()"
 date: 2017-09-14 19:00:00 +0800 
 categories: 算法
 tags: 
-    - ds-string
+    - KMP
 ---
 * content
 {:toc}
@@ -30,7 +30,7 @@ i & n & f & i & n & i & t & y \\
 \hline
 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
 \hline
-\end{array}$$，  
+\end{array}$$  
 &emsp;&emsp;由此展开，在下图中，如果问从下标0开始，长度为j的字符串的最后一个元素的下标是多少，你应该是知道是j - 1而不是j，在后面的讲解中如果你产生了一些疑问，我相信这段文字应该可以帮助到你。
 ![leetcode26_01](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_01.png)  
 &emsp;&emsp;KMP算法的实现建立在一个longest prefix suffix数组上，所以构建这个longest prefix suffix数组是KMP算法的第一步，那么什么是longeset prefix suffix数组？现在我们以LPS数组来代表longest prefix suffix数组，i代表LPS的下标，needle是我们的输入字符串，那么LPS[i]代表的是needle.substr(0, i + 1)(也就是说needle[0]~needle[i]所构成的字符串)中，既是longest proper prefix又是longest proper suffix的子字符串的长度，不明白什么意思？没关系，现在用实例来具体解释。  
