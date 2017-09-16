@@ -54,25 +54,26 @@ a & a & a & a \\
 ![leetcode26_06](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_06.png)  
 &emsp;&emsp;也就是说其实这个S也就是needle[0] ~ needle[j - 1]的longest proper suffix， 而这个longest proper suffix的长度已经算出来了，就是LPS[j - 1]。
 ![leetcode26_07](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_07.png)
-&emsp;&emsp;所以这个时候我们可以直接将j移动到S字符串的下一个字符，然后再次比较needle[j]与needle[i]
-![leetcode26_08](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_08.png)
-#### Code
-
+&emsp;&emsp;所以这个时候我们可以直接将j移动到S字符串的下一个字符，然后再次比较needle[j]与needle[i]，如果两者相等，那么LPS[i] = j + 1，如果两者不相等，那么继续重复刚才的步骤，寻找第三大proper prefix suffix
+![leetcode26_08](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_08.png)  
+根据上面的讨论代码可以总结为
+&emsp;&emsp;
 ```cpp
-class Solution {
-public:
-    int removeElement(vector<int>& nums, int val) {
-        int ret = 0;
-        for (int i = 0; i < nums.size(); i++) {
-            if (nums[i] != val) {
-                nums[ret++] = nums[i];
-            }
-        }
-        return ret;
+while (...) {
+    if (needle[j] != needle[i]) {
+        j = lps[j - 1];
+
     }
-};
+    if (needle[j] == needle[i]) {
+        lps[i] = j + 1;
+        j = j + 1;
+        i = i + 1;
+    }
+}
+
 ```
 
+#### Code
 
 #### Time Complexity
 
