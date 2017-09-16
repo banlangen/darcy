@@ -27,8 +27,6 @@ tags:
 &emsp;&emsp;有一个string : "abab"，那么它的proper prefixes就包括，"a"，"ab"，"aba"，同样的，它的proper suffixes就包括"b"，"ab"，"bab"，请注意，"abab"本身既不是proper prefix 也不是proper suffix，通过使用这个LPS数组保存到下标为i的字符为止的longest prefix suffix数组，对于"abab"而言，数组如下: 
 $$\begin{array}{|c|c|}
 \hline
-0 & 1 & 2 & 3 \\
-\hline
 a & b & a & b \\
 \hline
 0 & 0 & 1 & 2 \\
