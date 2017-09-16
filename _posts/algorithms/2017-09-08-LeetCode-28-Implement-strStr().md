@@ -48,7 +48,9 @@ a & a & a & a \\
 ![leetcode26_03](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_03.png)  
 &emsp;&emsp;之前我们假设needle[j] == needle[i]，那么如果两者不想同呢？这个时候，根据定义，longest prefix suffix的长度就肯定不是j了，为了求得LPS[i]的正确值，我们需要意识到，needle[0] ~ needle[j - 1] == needle[i - j] ~ needle[i - 1]这个前提条件仍然成立，但是needle[j] != needle[i]的情况下，这个前提条件已经没有意义，那下一步我们需要做的就是找到needle[0] ~ needle[i - 1]的下一个最大的longest prefix suffix的长度，下图中表示为S，当我们找到之后，我们就需要更新j的值，然后再比较needle[j]和needle[i]，如果此时needle[i] == needle[j]那么LPS[i] = j + 1， 或者说是字符串S的长度 + 1。  
 ![leetcode26_05](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_05.png)  
-&emsp;&emsp;现在我们来看如何找到这个S，我们先假设我们已经找到了S，那么根据前面我们的定义，这个S肯定是needle[0] ~ needle[i - 1]之间的第二大proper prefix suffix，而已知needle[0] ~ needle[i - 1] == needle[i - j] ~ needle[i - 1]，所以我们可以得到needle[0] ~ needle[i + len(S) - 1] == needle[j - len(S)] ~ needle[j - 1]，也就是如下图说表示的  
+&emsp;&emsp;现在我们来看如何找到这个S，先把j退回到之前的位置。  
+![leetcode26_04](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_04.png)  
+我们先假设我们已经找到了S，那么根据前面我们的定义，这个S肯定是needle[0] ~ needle[i - 1]之间的第二大proper prefix suffix，而已知needle[0] ~ needle[i - 1] == needle[i - j] ~ needle[i - 1]，所以我们可以得到needle[0] ~ needle[i + len(S) - 1] == needle[j - len(S)] ~ needle[j - 1]，也就是如下图说表示的  
 ![leetcode26_06](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_06.png)
 #### Code
 
