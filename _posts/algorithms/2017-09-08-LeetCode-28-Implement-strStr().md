@@ -88,14 +88,9 @@ while (i < needle.length()) {
     }
 }
 ```
-&emsp;&emsp;那么请依据上面的代码，尝试构建字符串"ananab#banana"的LPS数组。
-$$\begin{array}{|c|c|}
-\hline
-a & n & a & n & b & # & b & a & n & a & n & a\\
-\hline
-0 & 0 & 1 & 2 \\
-\hline
-\end{array}$$，
+&emsp;&emsp;以下视频用一个实例演示了执行过程。  
+<embed src='http://player.youku.com/player.php/sid/XMzAyNzYzNjEzMg==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
+
 #### Code
 
 
