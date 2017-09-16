@@ -53,7 +53,7 @@ a & a & a & a \\
 &emsp;&emsp;我们先假设我们已经找到了S，那么根据前面我们的定义，这个S肯定是needle[0] ~ needle[i - 1]之间的第二大proper prefix suffix，而已知needle[0] ~ needle[j - 1] == needle[i - j] ~ needle[i - 1]，所以我们可以得到needle[0] ~ needle[i + len(S) - 1] == needle[j - len(S)] ~ needle[j - 1]，也就是如下图所表示的  
 ![leetcode26_06](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_06.png)  
 &emsp;&emsp;也就是说其实这个S也就是needle[0] ~ needle[j - 1]的longest proper suffix， 而这个longest proper suffix的长度已经算出来了，就是LPS[j - 1]。
-![leetcode26_07](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_07.png)
+![leetcode26_07](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_07.png)  
 &emsp;&emsp;所以这个时候我们可以直接将j移动到S字符串的下一个字符，然后再次比较needle[j]与needle[i]，如果两者相等，那么LPS[i] = j + 1，如果两者不相等，那么继续重复刚才的步骤，寻找第三大proper prefix suffix
 ![leetcode26_08](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_08.png)  
 根据上面的讨论代码可以总结为
