@@ -66,7 +66,7 @@ a & a & a & a \\
 ![leetcode26_07](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_07.png)  
 &emsp;&emsp;所以这个时候我们可以直接将j移动到S字符串的最后一个字符的下一个字符，然后再次比较needle[j]与needle[i]，S字符串的最后一个字符的下一个字符的下标是多少？就是LPS[j - 1]（提醒：LPS中存放的是长度，然后再参考开篇提到的数组下标和长度的关系）如果两者相等，那么LPS[i] = j + 1，如果两者不相等，那么继续重复刚才的步骤，寻找第三大proper prefix suffix，这个循环可以一直这么执行下去，要么我们找到合适的起点，使得needle[j] == needle[i]，要么继续循环，直到j == 0的时候，这说明实在找不到一个S使得S + needle[j] = S + needle[i]，所以这个时候LPS[i] = 0。 
 ![leetcode26_08](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_08.png)  
-&emsp;&emsp;根据上面的讨论代码可以总结为
+&emsp;&emsp;根据上面的讨论，代码可以总结为
 ```cpp
 vector<int> lps(needle.length(), 0);
 int j = 0;
@@ -88,7 +88,14 @@ while (i < needle.length()) {
     }
 }
 ```
-
+&emsp;&emsp;那么请依据上面的代码，尝试构建字符串"ananab#banana"的LPS数组。
+$$\begin{array}{|c|c|}
+\hline
+a & n & a & n & b & # & b & a & n & a & n & a\\
+\hline
+0 & 0 & 1 & 2 \\
+\hline
+\end{array}$$，
 #### Code
 
 
