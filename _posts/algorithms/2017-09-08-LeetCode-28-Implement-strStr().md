@@ -43,9 +43,11 @@ a & a & a & a \\
 &emsp;&emsp;现在就解释下，如何通过算法找到longest prefix suffix数组，构建好LPS。为了说明清楚这个算法的原理，我们先做一个假设，假设LPS[0]到LPS[i - 1]的值已经通过之前的计算得到，现在要求LPS[i]，定义j是needle[0] ~ needle[i - 1]的子串中longest prefix suffix的长度， 那么根据LPS的定义，下图中needle[0] ~ needle[j - 1]的字符串与needle[i - j] ~needle[i - 1]的字符串的值是相同的，请务必思考并理解这一点，这是在整个算法中，我们都会反复用到这个事实。
 ![leetcode26_01](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_01.png)  
 &emsp;&emsp;接下来，如果needle[j] == needle[i]，那么我们可以知道这相当于在needle[0] ~ needle[j - 1] == needle[i - j] ~ needle[i - 1]的情况下，又知道needle[j] == needle[i]，那么很明显我们可以推导出，needle[0] ~ needle[j] == needle[i - j] ~ needle[i]，这个时候longest prefix suffix的长度就是j + 1，也就是说到needle[i]，longest prefix suffix的长度就是j + 1， 所以有LPS[i] = j + 1。
-![leetcode26_02](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_02.png)
-在得到了needle[i]之后，我们队
-![leetcode26_03](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_03.png)
+![leetcode26_02](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_02.png)  
+在得到了needle[i]之后，我们对i和j都自增一，再进行计算。  
+![leetcode26_03](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_03.png)  
+&emsp;&emsp;之前我们假设needle[j] == needle[i]，那么如果两者不想同呢？
+![leetcode26_04](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_04.png)
 #### Code
 
 ```cpp
