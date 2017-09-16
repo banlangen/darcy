@@ -31,7 +31,15 @@ a & b & a & b \\
 \hline
 0 & 0 & 1 & 2 \\
 \hline
-\end{array}$$  
+\end{array}$$，
+对于字符串"aaaa"而言，我们应该得到LPS数组
+$$\begin{array}{|c|c|}
+\hline
+a & a & a & a \\
+\hline
+0 & 1 & 2 & 3 \\
+\hline
+\end{array}$$，
 #### Code
 
 ```cpp
