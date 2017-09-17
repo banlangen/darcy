@@ -128,8 +128,8 @@ class Solution {
 public:
     void computeLPSArray(string needle, vector<int> &lps)
     {
-        int j = 0;
-        int i = 1;
+        size_t j = 0;
+        size_t i = 1;
         lps[0] = 0;
 
         while (i < needle.length()) {
@@ -149,9 +149,9 @@ public:
     }
 
     int patternSearch(string needle, string text, vector<int> &lps) {
-        int pat_index = 0, text_index = 0;
+        size_t pat_index = 0, text_index = 0;
         if (needle.length() == 0) {
-            return;
+            return -1;
         }
 
         while (text_index < text.length()) {
@@ -159,8 +159,8 @@ public:
             if (needle[pat_index] == text[text_index]) {
                 pat_index++;
                 text_index++;
-                if (pat_index == pattern.length()) {
-                    return text_index - pattern.length();
+                if (pat_index == needle.length()) {
+                    return text_index - needle.length();
                 }
             } else { // if the characters do not match, don't go back in the text. just adjust the pattern_index. 
                 if (pat_index != 0) {
@@ -170,12 +170,13 @@ public:
                 }
             }
         }
+        return -1;
     }
 
     int strStr(string haystack, string needle) {
         vector<int> lps(needle.length(), 0);
         computeLPSArray(needle, lps);
-        return patternSearch(needle, )
+        return patternSearch(needle, haystack, lps);
     }
 };
 ```
