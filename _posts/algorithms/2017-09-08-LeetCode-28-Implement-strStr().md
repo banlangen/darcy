@@ -112,7 +112,8 @@ while (i < needle.length()) {
 &emsp;&emsp;我们可以将上面的经验总结为下面这句话，对于已经匹配了的pattern中的字符串，如果LPS是K，那么我们可以跳过pattern的前'K'个字符的匹配，然后从pattern的下标为K的字符开始与再与text中的字符比较。  
 &emsp;&emsp;接着前面的讨论，将text的第4个字符'X'与pattern的第4个字符'D'比较，不匹配，所以匹配的子串就变成了"ABC"，对于"ABC"而言，我们去找他的LPS，很显然是0，所以我们没法跳过任何任何字符，必须从pattern的下标为0的字符开始'A'，与text中刚刚不匹配的字符'X'再做比较，还是不匹配，在这种情况下，pattern中不匹配的字符是下标0，我们自然没有办法跳过任何的字符，所以我们仅仅向右移动一个字符  
 ![leetcode26_18](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_18.png)  
-![leetcode26_19](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_19.png)
+![leetcode26_19](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_19.png)  
+![leetcode26_20](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_20.png)
 
 #### Code
 
