@@ -102,7 +102,7 @@ while (i < needle.length()) {
 &emsp;&emsp;为了更好的理解这个概念，我们这里再举另外一个例子，下图我们用一样的逻辑，可以知道"AAAAAAA"的LPS是6，所以将pattern向右移动一个字符是有用的。
 ![leetcode26_13](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_13.png)  
 &emsp;&emsp;回到刚才的例子，我们已经得出的结论是，我们首先查看不同点之前的子串，也就是"ABCDABC"，它的LPS并不是6，所以将pattern向右移动一个字符没有任何意义。
-![leeetcode26_14](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_14.png)
+![leeetcode26_14](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_14.png)  
 &emsp;&emsp;类似，对于相同的子串，我们发现，如果将pattern向右移动两位，pattern的'Y'之前的5个字符"CDABC"与text的'X'之前的5个字符是匹配的，现在在来比较pattern的前5个字符组成的字符串，显然同一个子串"ABCDABC"，它的LPS也不是5，所以向右移动两个字符没有意义。  
 ![leetcode26_14](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_15.png)  
 &emsp;&emsp;同样的，向右移动三个字符也没有意义。  
