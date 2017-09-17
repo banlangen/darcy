@@ -162,11 +162,11 @@ public:
                 if (pat_index == pattern.length()) {
                     return text_index - pattern.length();
                 }
-            } else {
+            } else { // if the characters do not match, don't go back in the text. just adjust the pattern_index. 
                 if (pat_index != 0) {
                     pat_index = lps[pat_index - 1];
                 } else {
-
+                    text_index++;
                 }
             }
         }
@@ -179,6 +179,7 @@ public:
     }
 };
 ```
+
 #### Time Complexity
 
-O(n);
+KMP算法的时间复杂度是O(m + n)
