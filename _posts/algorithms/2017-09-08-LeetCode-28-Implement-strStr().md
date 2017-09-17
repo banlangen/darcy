@@ -89,12 +89,11 @@ while (i < needle.length()) {
 }
 ```
 &emsp;&emsp;以下视频用一个实例演示了执行过程。  
-
-<embed src='http://player.youku.com/player.php/sid/XMzAyNzYzNjEzMg==/v.swf' allowFullScreen='true' quality='high' width='100%' height='100%' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
-
-<embed id='movie' src='http://player.youku.com/player.php/sid/XMzAyNzYzNjEzMg==/v.swf' allowfullscreen='true' quality='high' width='90%' align='middle' allowscriptaccess='always' type='application/x-shockwave-flash'/>  
+<div style='text-align: center; width: 100%; padding-bottom: 83%; height: 0px;'>
+<embed id='movie' src='http://player.youku.com/player.php/sid/XMzAyNzYzNjEzMg==/v.swf' allowfullscreen='true' quality='high' width='100%' align='middle' allowscriptaccess='always' type='application/x-shockwave-flash'/>  
 
 <script type='text/javascript'>document.getElementById('movie').style.height=document.getElementById('movie').scrollWidth*0.8+'px'</script>
+</div>
 
 #### Code
 
