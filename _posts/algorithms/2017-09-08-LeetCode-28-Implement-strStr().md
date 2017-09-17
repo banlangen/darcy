@@ -91,12 +91,11 @@ while (i < needle.length()) {
 &emsp;&emsp;以下视频用一个实例演示了代码的执行过程，抱歉引用youku的视频会被嵌入广告。  
 <div style='text-align: center; width: 100%; padding-bottom: 83%; height: 0px;'>
 <embed id='movie' src='http://player.youku.com/player.php/sid/XMzAyNzYzNjEzMg==/v.swf' allowfullscreen='true' quality='high' width='90%' align='middle' allowscriptaccess='always' type='application/x-shockwave-flash'/>  
-
 <script type='text/javascript'>document.getElementById('movie').style.height=document.getElementById('movie').scrollWidth*0.8+'px'</script>
 </div>
 &emsp;&emsp;LPS的计算搞清楚后，我们来看KMP算法本身，现在假设在下面的Text中寻找Pattern子字符串。
 ![leetcode26_09](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_09.png)  
-&emsp;&emsp;我们可以发现，除掉最后一个Y，所有的pattern字符串都匹配上了，这个也就意味着在Y之前的6个字符是与text匹配的（Y之前一共有7个字符），所以"BCDABC"最后6个字符串已经和  
+&emsp;&emsp;我们可以发现，除掉最后一个Y，所有的pattern字符串都匹配上了，这个也就意味着在Y之前的6个字符是与text匹配的（Y之前一共有7个字符），也就是说下图中的"BCDABC"是在text和pattern里面互相match的  
 ![leetcode26_10](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_10.png)  
 &emsp;&emsp;在暴力解法里面，我们是向右移动一位，然后进入下图状态，刚才提到在移动之前，
 ![leetcode26_11](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_11.png)
