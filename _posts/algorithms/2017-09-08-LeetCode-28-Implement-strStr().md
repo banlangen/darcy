@@ -88,9 +88,9 @@ while (i < needle.length()) {
     }
 }
 ```
-&emsp;&emsp;以下视频用一个实例演示了执行过程。  
+&emsp;&emsp;以下视频用一个实例演示了代码的执行过程，抱歉引用youku的视频会被嵌入广告。请务必适应视频中浓郁南亚咖喱风的口音，特别是如果你想在软件行业发展你的事业。  
 <div style='text-align: center; width: 100%; padding-bottom: 83%; height: 0px;'>
-<embed id='movie' src='http://player.youku.com/player.php/sid/XMzAyNzYzNjEzMg==/v.swf' allowfullscreen='true' quality='high' width='100%' align='middle' allowscriptaccess='always' type='application/x-shockwave-flash'/>  
+<embed id='movie' src='http://player.youku.com/player.php/sid/XMzAyNzYzNjEzMg==/v.swf' allowfullscreen='true' quality='high' width='90%' align='middle' allowscriptaccess='always' type='application/x-shockwave-flash'/>  
 
 <script type='text/javascript'>document.getElementById('movie').style.height=document.getElementById('movie').scrollWidth*0.8+'px'</script>
 </div>
