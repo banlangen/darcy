@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Leetcode 25. Reverse Nodes in k Group"
+title: "Leetcode 27. Remove Element"
 date: 2017-09-14 19:00:00 +0800 
 categories: 算法
 tags: 
