@@ -90,7 +90,7 @@ while (i < needle.length()) {
 ```
 &emsp;&emsp;以下视频用一个实例演示了执行过程。  
 
-<embed src='http://player.youku.com/player.php/sid/XMzAyNzYzNjEzMg==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
+<embed src='http://player.youku.com/player.php/sid/XMzAyNzYzNjEzMg==/v.swf' allowFullScreen='true' quality='high' width='100%' height='100%' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
 
 #### Code
 
