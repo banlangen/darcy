@@ -94,6 +94,8 @@ while (i < needle.length()) {
 
 <script type='text/javascript'>document.getElementById('movie').style.height=document.getElementById('movie').scrollWidth*0.8+'px'</script>
 </div>
+&emsp;&emsp;LPS的计算搞清楚就，我们来看KMP算法本身，现在假设在下面的Text中寻找Pattern子字符串。
+![leetcode26_09](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_09.png)
 
 
 #### Code
