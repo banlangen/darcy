@@ -33,7 +33,7 @@ i & n & f & i & n & i & t & y \\
 \end{array}$$  
 &emsp;&emsp;由此展开，在下图中，如果问从下标0开始，长度为j的字符串的最后一个元素的下标是多少，你现在应该知道是j - 1而不是j，而下标为j的字符是长度为j的字符的最后一个字符的下一个字符，在后面的讲解中如果你产生了一些疑问，我相信这段文字应该可以帮助到你。  
 ![leetcode26_01](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_01.png)  
-&emsp;&emsp;KMP算法的实现建立在一个longest prefix suffix数组上，所以构建这个longest prefix suffix数组是KMP算法的第一步，那么什么是longeset prefix suffix数组？现在我们以LPS数组来代表longest prefix suffix数组，i代表LPS的下标，needle是我们的输入字符串，那么LPS[i]代表的是needle.substr(0, i + 1)(也就是说needle[0]~needle[i]所构成的字符串)中，既是longest proper prefix又是longest proper suffix的子字符串的**长度**，不明白什么意思？没关系，现在用实例来具体解释。  
+&emsp;&emsp;KMP算法的实现建立在一个longest prefix suffix数组上，所以构建这个longest prefix suffix数组是KMP算法的第一步，那么什么是longeset prefix suffix数组？为了方便，我们以LPS数组来代表longest prefix suffix数组，i代表LPS的下标，needle是我们的输入字符串，那么LPS[i]代表的是needle.substr(0, i + 1)(也就是说needle[0]~needle[i]所构成的字符串)中，既是longest proper prefix又是longest proper suffix的子字符串的**长度**，不明白什么意思？没关系，现在用实例来具体解释。  
 &emsp;&emsp;有一个string : "abab"，那么它的proper prefixes就包括，"a"，"ab"，"aba"，同样的，它的proper suffixes就包括"b"，"ab"，"bab"，请注意，"abab"本身既不是proper prefix 也不是proper suffix，通过使用这个LPS数组保存到下标为i的字符为止的longest prefix suffix，对于"abab"而言，数组如下，所以LPS数组的内容是[0, 0, 1, 2]
 $$\begin{array}{|c|c|}
 \hline
