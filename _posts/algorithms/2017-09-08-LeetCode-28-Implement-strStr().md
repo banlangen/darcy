@@ -100,7 +100,9 @@ while (i < needle.length()) {
 &emsp;&emsp;在暴力解法里面，我们是向右移动一位，然后进入下图状态，现在我们想做这么一个事儿，将pattern中的前6个字符组成的字符串"ABCDAB"和与其位置对应的**text中'X'之前的6个字符组成的字符串**"BCDABC"进行比较。  
 ![leetcode26_11](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_11.png)  
 &emsp;&emsp;我们知道在pattern字符串里面它的前6个字符组成的字符串"ABCDAB"和pattern的'Y'之前的6个字符组成的字符串"BCDABC"是不相等的，并且我们已经知道，pattern的'Y'之前的6个字符组成的字符串是与**text中在'X'之前的6个字符组成的字符串**匹配的，所以自然可以知道对于pattern中的字符串"ABCDABC"，它的longest prefix suffix长度，肯定不是6，所以向右移动一位肯定是不会match的。
-![leetcode26_12](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_12.png)
+![leetcode26_12](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_12.png)  
+&emsp;&emsp;为了更好的理解这个概念，我们这里再举另外一个例子，
+![leetcode26_13](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_13.png)
 
 #### Code
 
