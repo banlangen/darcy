@@ -118,10 +118,67 @@ while (i < needle.length()) {
 ![leetcode26_22](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_22.png)
 ![leetcode26_23](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_23.png)
 ![leetcode26_24](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_24.png)  
-&emsp;&emsp;我们继续观察与text已经匹配的子串"ABCDABC"，它的LPS是3，所以我们可以跳过pattern的前3个字符，而用第4个字符'D'，与text的'D'比较，现在我们发现pattern和text就可以匹配了
+&emsp;&emsp;我们继续观察与text已经匹配的子串"ABCDABC"，它的LPS是3，所以我们可以跳过pattern的前3个字符，而用第4个字符'D'，与text的'D'比较，现在我们发现pattern和text就可以匹配了。
+&emsp;&emsp;所以总结下KMP算法，首先KMP算法需要计算出LPS数组，然后我们查看遇到不匹配的字符后，已经匹配的字符串中的LPS值，然后取出LPS的值并以这个值为pattern的下标，用新得到的pattern的字符与text字符再做比较，如果pattern的下标为0的字符还是不匹配，我们只需要向右移动pattern字符串一个字符再和text比较。
+
 #### Code
 
+```cpp
+class Solution {
+public:
+    void computeLPSArray(string needle, vector<int> &lps)
+    {
+        int j = 0;
+        int i = 1;
+        lps[0] = 0;
 
+        while (i < needle.length()) {
+            if (needle[j] == needle[i]) {
+                lps[i] = j + 1;
+                j++;
+                i++;
+            } else { // needle[j] != needle[i])
+                if (j != 0) {
+                    j = lps[j - 1];
+                } else { // j == 0
+                    lps[i] = 0;
+                    i++;
+                }
+            }
+        }
+    }
+
+    int patternSearch(string needle, string text, vector<int> &lps) {
+        int pat_index = 0, text_index = 0;
+        if (needle.length() == 0) {
+            return;
+        }
+
+        while (text_index < text.length()) {
+            //if charachters match ,look for next character match
+            if (needle[pat_index] == text[text_index]) {
+                pat_index++;
+                text_index++;
+                if (pat_index == pattern.length()) {
+                    return text_index - pattern.length();
+                }
+            } else {
+                if (pat_index != 0) {
+                    pat_index = lps[pat_index - 1];
+                } else {
+
+                }
+            }
+        }
+    }
+
+    int strStr(string haystack, string needle) {
+        vector<int> lps(needle.length(), 0);
+        computeLPSArray(needle, lps);
+        return patternSearch(needle, )
+    }
+};
+```
 #### Time Complexity
 
 O(n);
