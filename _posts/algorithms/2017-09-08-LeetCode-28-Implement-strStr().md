@@ -97,9 +97,10 @@ while (i < needle.length()) {
 &emsp;&emsp;LPS的计算搞清楚就，我们来看KMP算法本身，现在假设在下面的Text中寻找Pattern子字符串。
 ![leetcode26_09](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_09.png)  
 &emsp;&emsp;我们可以发现，除掉最后一个Y，所有的pattern字符串都匹配上了，
-![leetcode26_10](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_10.png)
-&emsp;&emsp;回忆下，暴力解法里面，我们是向右移动一位
+![leetcode26_10](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_10.png)  
+&emsp;&emsp;回忆下，暴力解法里面，我们是向右移动一位，然后进入下图状态，
 ![leetcode26_11](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_11.png)
+
 #### Code
 
 
