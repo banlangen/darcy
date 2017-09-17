@@ -107,8 +107,12 @@ while (i < needle.length()) {
 ![leeetcode26_14](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_14.png)
 &emsp;&emsp;类似，对于相同的子串，我们发现，如果将pattern向右移动两位，pattern的'Y'之前的5个字符"CDABC"与text的'X'之前的5个字符是匹配的，现在在来比较pattern的前5个字符组成的字符串，显然同一个子串"ABCDABC"，它的LPS也不是5，所以向右移动两个字符没有意义。
 ![leetcode26_14](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_15.png)  
-&emsp;&emsp;同样的，向右移动三个字符也没有意义
-![leetcode26_14](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_16.png)
+&emsp;&emsp;同样的，向右移动三个字符也没有意义。
+![leetcode26_14](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_16.png)  
+&emsp;&emsp;那向右移动四个字符呢？这个时候，正好我们的"ABCDABC"的LPS就是3，所以向右移动四个字符是有意义的，而这个时候，由于三个"ABC"都互相相同，所以pattern的"ABC"和text对应位置的"ABC"是没有必要再比较了，直接从后面的第4个字符开始比较，而这个时候，text的第4个字符是'X'，pattern的第4个字符是'D'，比较这两个字符是否相等。   
+![leetcode26_14](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_17.png)  
+&emsp;&emsp;我们可以将上面的经验总结为下面这句话，对于已经匹配了的pattern中的字符串，如果LPS是K，那么我们可以跳过pattern的前'K'个字符的匹配，然后从下标为K的
+
 #### Code
 
 
