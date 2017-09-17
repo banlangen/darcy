@@ -98,7 +98,7 @@ while (i < needle.length()) {
 ![leetcode26_09](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_09.png)  
 &emsp;&emsp;我们可以发现，除掉最后一个Y，所有的pattern字符串都匹配上了，
 ![leetcode26_10](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_10.png)
-&emsp;&emsp;回忆下，暴力解法里面，
+&emsp;&emsp;回忆下，暴力解法里面，我们是向右移动一位
 ![leetcode26_11](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_11.png)
 #### Code
 
