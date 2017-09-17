@@ -92,9 +92,8 @@ while (i < needle.length()) {
 
 <embed src='http://player.youku.com/player.php/sid/XMzAyNzYzNjEzMg==/v.swf' allowFullScreen='true' quality='high' width='100%' height='100%' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
 
-<divstyle="text-align: center;">
-<embedid='movie' src='http://player.youku.com/player.php/sid/XMzAyNzYzNjEzMg==/v.swf' allowfullscreen='true' quality='high' width='90%' align='middle' allowscriptaccess='always' type='application/x-shockwave-flash'/>
-</div>
+<embedid='movie' src='http://player.youku.com/player.php/sid/XMzAyNzYzNjEzMg==/v.swf' allowfullscreen='true' quality='high' width='90%' align='middle' allowscriptaccess='always' type='application/x-shockwave-flash'/>  
+
 <scripttype='text/javascript'>document.getElementById('movie').style.height=document.getElementById('movie').scrollWidth*0.8+'px'</script>
 
 #### Code
