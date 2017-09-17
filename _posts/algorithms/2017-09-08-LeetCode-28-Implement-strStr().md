@@ -126,8 +126,7 @@ while (i < needle.length()) {
 ```cpp
 class Solution {
 public:
-    void computeLPSArray(string needle, vector<int> &lps)
-    {
+    void computeLPSArray(string needle, vector<int> &lps) {
         size_t j = 0;
         size_t i = 1;
         lps[0] = 0;
@@ -151,7 +150,7 @@ public:
     int patternSearch(string needle, string text, vector<int> &lps) {
         size_t pat_index = 0, text_index = 0;
         if (needle.length() == 0) {
-            return -1;
+            return 0;
         }
 
         while (text_index < text.length()) {
@@ -162,7 +161,7 @@ public:
                 if (pat_index == needle.length()) {
                     return text_index - needle.length();
                 }
-            } else { // if the characters do not match, don't go back in the text. just adjust the pattern_index. 
+            } else { // if the characters do not match, don't go back in the text. just adjust the pattern_index.
                 if (pat_index != 0) {
                     pat_index = lps[pat_index - 1];
                 } else {
@@ -175,6 +174,11 @@ public:
 
     int strStr(string haystack, string needle) {
         vector<int> lps(needle.length(), 0);
+        if (needle.length() == 0) {
+            return 0;
+        } else if (haystack.length() == 0) {
+            return -1;
+        }
         computeLPSArray(needle, lps);
         return patternSearch(needle, haystack, lps);
     }
