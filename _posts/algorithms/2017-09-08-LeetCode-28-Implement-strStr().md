@@ -117,8 +117,8 @@ while (i < needle.length()) {
 ![leetcode26_21](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_21.png)
 ![leetcode26_22](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_22.png)
 ![leetcode26_23](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_23.png)
-![leetcode26_24](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_24.png)
-&emsp;&emsp;我们继续观察与text已经匹配的子串"ABCDABC"，它的LPS是3，所以我们可以跳过pattern的前3个字符，而用第4个字符'D'，与text的'D'比较，
+![leetcode26_24](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_24.png)  
+&emsp;&emsp;我们继续观察与text已经匹配的子串"ABCDABC"，它的LPS是3，所以我们可以跳过pattern的前3个字符，而用第4个字符'D'，与text的'D'比较，现在我们发现pattern和text就可以匹配了
 #### Code
 
 
