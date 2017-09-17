@@ -110,11 +110,12 @@ while (i < needle.length()) {
 &emsp;&emsp;那向右移动四个字符呢？这个时候，正好我们的"ABCDABC"的LPS就是3，所以向右移动四个字符是有意义的，而这个时候，由于三个"ABC"都互相相同，所以pattern的"ABC"和text对应位置的"ABC"是没有必要再比较了，直接从后面的第4个字符开始比较，而这个时候，text的第4个字符是'X'，pattern的第4个字符是'D'，比较这两个字符是否相等。   
 ![leetcode26_14](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_17.png)  
 &emsp;&emsp;我们可以将上面的经验总结为下面这句话，对于已经匹配了的pattern中的字符串，如果LPS是K，那么我们可以跳过pattern的前'K'个字符的匹配，然后从pattern的下标为K的字符开始与再与text中的字符比较。  
-&emsp;&emsp;接着前面的讨论，将text的第4个字符'X'与pattern的第4个字符'D'比较，不匹配，所以匹配的子串就变成了"ABC"，对于"ABC"而言，我们去找他的LPS，很显然是0，所以我们没法跳过任何任何字符，必须从pattern的下标为0的字符开始'A'，与text中刚刚不匹配的字符'X'再做比较，还是不匹配，在这种情况下，pattern中不匹配的字符是下标0，我们自然没有办法跳过任何的字符，所以我们仅仅向右移动一个字符，这个时候pattern的子串"AB"与text的相应子串匹配，而字符'C'并不与'X'匹配，我们再次观察这个已经匹配的子串"AB"，"AB"的LPS是0，所以我们没有办法跳过任何的字符，只能用pattern的第一个字符  
+&emsp;&emsp;接着前面的讨论，将text的第4个字符'X'与pattern的第4个字符'D'比较，不匹配，所以匹配的子串就变成了"ABC"，对于"ABC"而言，我们去找他的LPS，很显然是0，所以我们没法跳过任何任何字符，必须从pattern的下标为0的字符开始'A'，与text中刚刚不匹配的字符'X'再做比较，还是不匹配，在这种情况下，pattern中不匹配的字符是下标0，我们自然没有办法跳过任何的字符，所以我们仅仅向右移动一个字符，这个时候pattern的子串"AB"与text的相应子串匹配，而字符'C'并不与'X'匹配，我们再次观察这个已经匹配的子串"AB"，"AB"的LPS是0，所以我们没有办法跳过任何的字符，只能用pattern的第一个字符'A'和text的'X'比较，很明显不匹配，所以只能向右移动一个字符，  
 ![leetcode26_18](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_18.png)  
 ![leetcode26_19](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_19.png)  
 ![leetcode26_20](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_20.png)
 ![leetcode26_21](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_21.png)
+![leetcode26_22](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_22.png)
 #### Code
 
 
