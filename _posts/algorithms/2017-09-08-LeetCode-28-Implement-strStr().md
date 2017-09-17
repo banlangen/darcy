@@ -97,7 +97,7 @@ while (i < needle.length()) {
 ![leetcode26_09](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_09.png)  
 &emsp;&emsp;我们可以发现，除掉最后一个Y，所有的pattern字符串都匹配上了，这个也就意味着在Y之前的6个字符是与text匹配的（Y之前一共有7个字符），也就是说下图中的"BCDABC"是在text和pattern里面互相match的  
 ![leetcode26_10](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_10.png)  
-&emsp;&emsp;在暴力解法里面，我们是向右移动一位，然后进入下图状态，刚才提到在移动之前，
+&emsp;&emsp;在暴力解法里面，我们是向右移动一位，然后进入下图状态，现在我们想做这么一个事儿，将pattern中的前6个字符组成的字符串"ABCDAB"和与其位置对应的text中的字符串"BCDABC"进行比较，
 ![leetcode26_11](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_11.png)
 
 #### Code
