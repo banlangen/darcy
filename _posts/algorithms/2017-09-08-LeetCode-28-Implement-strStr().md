@@ -94,11 +94,11 @@ while (i < needle.length()) {
 
 <script type='text/javascript'>document.getElementById('movie').style.height=document.getElementById('movie').scrollWidth*0.8+'px'</script>
 </div>
-&emsp;&emsp;LPS的计算搞清楚就，我们来看KMP算法本身，现在假设在下面的Text中寻找Pattern子字符串。
+&emsp;&emsp;LPS的计算搞清楚后，我们来看KMP算法本身，现在假设在下面的Text中寻找Pattern子字符串。
 ![leetcode26_09](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_09.png)  
-&emsp;&emsp;我们可以发现，除掉最后一个Y，所有的pattern字符串都匹配上了，
+&emsp;&emsp;我们可以发现，除掉最后一个Y，所有的pattern字符串都匹配上了，这个也就意味着在Y之前的6个字符是与text匹配的（Y之前一共有7个字符）
 ![leetcode26_10](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_10.png)  
-&emsp;&emsp;回忆下，暴力解法里面，我们是向右移动一位，然后进入下图状态，
+&emsp;&emsp;在暴力解法里面，我们是向右移动一位，然后进入下图状态，刚才提到在移动之前，
 ![leetcode26_11](http://ovwkcbdpf.bkt.clouddn.com/image/leetcode26/leetcode26_11.png)
 
 #### Code
