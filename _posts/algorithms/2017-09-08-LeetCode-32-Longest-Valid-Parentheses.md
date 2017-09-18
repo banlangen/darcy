@@ -23,7 +23,7 @@ Another example is ")()())", where the longest valid parentheses substring is "(
 
 #### Solution
 
-&emsp;&emsp;我们用"(()())())"我们用到一个数据结构stack，定义一个idx初始值为-1，只要遇到一个'('我们就将它的index推入到stack中，定义一个leftmost下标，代表当前string最左侧的边界，初始为-1，当遇到')'我们将stack的栈顶pop出来，并计算当前读入数据的下标和pop之后栈顶的下标之间的差值，更新到maxlen变量中
+&emsp;&emsp;我们用"(()())())"我们用到一个数据结构stack，定义一个idx初始值为-1，只要遇到一个'('我们就将它的index推入到stack中，定义一个leftmost下标，代表当前string最左侧的边界，初始为-1，当遇到')'我们将stack的栈顶pop出来，并计算当前读入数据的下标和pop之后栈顶的下标之间的差值，更新到maxlen变量中  
 $$\begin{array}{|c|c|}
 \hline
 string & idx & leftmost & stack & pop & maxlen \\
