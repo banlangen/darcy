@@ -4,7 +4,7 @@ title: "Leetcode 30. Substring with Concatenation of All Words "
 date: 2017-09-18 19:00:00 +0800 
 categories: 算法
 tags: 
-    - ds-array
+    - others
 ---
 * content
 {:toc}
