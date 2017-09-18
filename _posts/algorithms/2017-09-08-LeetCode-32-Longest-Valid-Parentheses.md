@@ -44,9 +44,9 @@ string & idx & leftmost & stack & pop & maxlen \\
 \hline 
 ) & 7 & -1 & & 6 & 7 - (-1) \\
 \hline
-) & 8 & -1->8 & &
+) & 8 & -1->8 & & & \\
 \hline
-( & 9 & 8 & 9 & & & \\
+( & 9 & 8 & 9 & & \\
 \hline
 ) & 10 & 8 & & 9 & 10 - 8 \\
 \hline
