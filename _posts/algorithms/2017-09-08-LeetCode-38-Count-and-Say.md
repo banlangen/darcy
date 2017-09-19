@@ -27,7 +27,7 @@ tags:
 ```cpp
 class Solution {
 public:
-    int divide(int dividend, int divisor) {
+    string countAndSay(int n) {
         
     }
 };
