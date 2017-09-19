@@ -1,10 +1,9 @@
 ---
 layout: post
-title: "Leetcode 29. Divide Two Integers"
+title: "Template"
 date: 2017-09-18 19:00:00 +0800 
 categories: 算法
 tags: 
-    - ds-array
 ---
 * content
 {:toc}
