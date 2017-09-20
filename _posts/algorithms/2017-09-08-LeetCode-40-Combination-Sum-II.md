@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "leetcode 39. Combination Sum II"
+title: "leetcode 40. Combination Sum II"
 date: 2017-09-18 19:00:00 +0800 
 categories: 算法
 tags: 
