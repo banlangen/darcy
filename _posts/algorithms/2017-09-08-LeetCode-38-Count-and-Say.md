@@ -20,9 +20,8 @@ tags:
 
 #### Solution
 
-&emsp;&emsp; 定义两个变量，count和prev，prev表示前一个字符是什么，count表示前一个出现字符的个数，当当前字符与前一个字符不相等的时候，就将前一个字符以及他的个数放到新的string中，同时还要注意，在字符串结束的时候，由于没有下一个字符了，所以这个时候不要忘记，还要将count和prev添加到最后的结果中去。
-
-$$\begin{array}{c|c}
+&emsp;&emsp; 定义两个变量，count和prev，prev表示前一个字符是什么，count表示前一个出现字符的个数，当当前字符与前一个字符不相等的时候，就将前一个字符以及他的个数放到新的string中，同时还要注意，在字符串结束的时候，由于没有下一个字符了，所以这个时候不要忘记，还要将count和prev添加到最后的结果中去。  
+$$\begin{array}{|c|c|}
 \hline
 string & 1 & 2 & 1 & 1 \\
 \hline 
