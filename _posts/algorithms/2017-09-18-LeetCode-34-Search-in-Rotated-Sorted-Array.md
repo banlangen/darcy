@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Search in Rotated Sorted Array"
+title: "leetcode 34. Search in Rotated Sorted Array"
 date: 2017-09-18 19:00:00 +0800 
 categories: 算法
 tags: 
