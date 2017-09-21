@@ -21,7 +21,7 @@ tags:
 
 #### Solution
 
-&emsp;&emsp;建立如下的bool型数组，size是 (m + 1)(n + 1)所以是s字符串的长度+1，与p字符串长度+1，代表的意义，比如[i][j]:s中i长度的字符串与p中j长度的字符串是否匹配，比如s "abc", 与p "abdef"，如果有[2][2]代表的是s中的"ab"p中的"ab"是否match，match的话值就是true，
+&emsp;&emsp;建立如下的bool型数组，size是 (m + 1)(n + 1)所以是s字符串的长度+1，与p字符串长度+1，代表的意义，比如[i][j]:s中i长度的字符串与p中j长度的字符串是否匹配，比如s "abc", 与p "abdef"，如果有[2][2]代表的是s中的"ab"p中的"ab"是否match，match的话值就是true。  
 $$\begin{array}{|c|c|}
 \hline
 "p\s" & a & b & c \\
@@ -33,7 +33,7 @@ $$\begin{array}{|c|c|}
 3 & & & \\
 \hline
 \end{array}$$
-
+&emsp;&emsp;关键的是初始状态，先初始化s是空字符串的时候，如果p也是空，那么肯定是true，所以[0][0]肯定是true，对于[1][0]而言，如果是*的话，那么其实可以看[0][0]的情况，所以if[i] == '\*' [i][0] == [i-1][0]，所以推而广之当'\*'被认为是0个字符的时候，可以有[i][j] == [i][j - 1]，
 #### Code
 
 ```cpp
