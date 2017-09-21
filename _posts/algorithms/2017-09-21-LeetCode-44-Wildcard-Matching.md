@@ -33,14 +33,35 @@ $$\begin{array}{|c|c|}
 3 & & & \\
 \hline
 \end{array}$$
-&emsp;&emsp;关键的是初始状态，先初始化s是空字符串的时候，如果p也是空，那么肯定是true，所以[0][0]肯定是true，对于[1][0]而言，如果是*的话，那么其实可以看[0][0]的情况，所以if[i] == '\*' [i][0] == [i-1][0]，所以推而广之当'\*'被认为是0个字符的时候，可以有[i][j] == [i][j - 1]，
+&emsp;&emsp;关键的是初始状态，先初始化s是空字符串的时候，如果p也是空，那么肯定是true，所以[0][0]肯定是true，对于[1][0]而言，如果是*的话，那么其实可以看[0][0]的情况，所以if[i] == '\*' [i][0] == [i-1][0]，所以推而广之当'\*'被认为是0个字符的时候，可以有[i - 1][j] == [i][j]，
 #### Code
 
 ```cpp
 class Solution {
 public:
-    int divide(int dividend, int divisor) {
-        
+    bool isMatch(string s, string p) {
+        vector<vector<bool>> match(p.length() + 1, vector<bool>(s.length() + 1，false));
+        match[0][0] = true;
+        for (int i = 1; i < p.length() + 1; i++) {
+            if (p[i - 1] == '*') {
+                match[i][0] = match[i - 1][0];
+            }
+        }
+
+        for (int j = 1; j < s.length() + 1; j++) {
+            match[0][j] = false;
+        }
+
+        for (int k = 1; k < p.length() + 1; k++) {
+            for (int l = 1; l < s.length() + 1; l++) {
+                if (s[l - 1] == p[k - 1] || p[k - 1] == '?') {
+                    match[k][l] = match[k - 1][l - 1];
+                } else if (p[k - 1] == '*') {
+                    match[k][l] = match[k - 1][l] || match[k][l - 1];
+                }
+            }
+        }
+        return match[p.length()][s.length()];
     }
 };
 ```
