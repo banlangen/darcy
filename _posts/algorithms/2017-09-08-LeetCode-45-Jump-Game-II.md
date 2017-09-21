@@ -30,6 +30,7 @@ tags:
 ##### 45 Jump Game II
 
 &emsp;&emsp;[2, 1, 3, 1, 1, 1, 1]求最少的步数，用变量step记录行走的部署，用curmax记录当前这一步能走到的最远步数，那么下标0的情况是，step 1, curmax 就是index 为2的位置，那走两步的curmax 是到index 5， 还需要一个nextmax当前这一步可以计算得到的下一步的max  
+
 $$\begin{array}{|c|c|}
 \hline
 '' & 0 & 1 & 2 & 3 & 4 & 5 & 6 \\
@@ -66,6 +67,9 @@ public:
     }
 };
 ```
+
+##### 45 Jump Game II
+
 
 
 #### Time Complexity
