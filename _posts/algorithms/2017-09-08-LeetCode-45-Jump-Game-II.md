@@ -34,7 +34,7 @@ $$\begin{array}{|c|c|}
 \hline
 '' & 0 & 1 & 2 & 3 & 4 & 5 & 6 \\
 \hline
-^ & 2 & 1 & 3 & 1 & 1 & 1 & 1 \\
+'' & 2 & 1 & 3 & 1 & 1 & 1 & 1 \\
 \hline 
 idx & 0 & 1/2 & 3/4/5 & & & & \\
 \hline
@@ -45,6 +45,7 @@ curmax & 0 & 2 & 5 & 6 & & & \\
 nextmax & 0->2 & 2->5 & 5->6 & 6 & & & \\
 \hline
 \end{array}$$
+
 #### Code
 
 ##### 55 Jump Game
