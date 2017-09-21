@@ -70,7 +70,30 @@ public:
 
 ##### 45 Jump Game II
 
-
+```cpp
+class Solution {
+public:
+    bool canJump(vector<int>& nums) {
+        if (nums.size() == 0) {
+            return 0;
+        }
+        int curMax = 0;
+        int nextMax = 0;
+        int step = 0;
+        int index = 0;
+        while (index <= curMax) {
+            while (index <= curMax) {
+                nextMax = max(nextMax, index + nums[index]);
+                index++;
+            }
+            curMax = nextMax;
+            step++;
+            if (curMax >= nums.length() - 1) return step;
+        }
+        return 0;
+    }
+};
+```
 
 #### Time Complexity
 
