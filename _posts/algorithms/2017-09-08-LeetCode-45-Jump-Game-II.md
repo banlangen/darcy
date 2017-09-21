@@ -42,7 +42,7 @@ step & 0 & 1 & 2 & 3 & & & \\
 \hline
 curmax & 0 & 2 & 5 & 6 & & & \\
 \hline 
-nextmax & 0->2 & 2->5 & 5->6 & 6 & & & \\
+nextmax & '0->2' & '2->5' & '5->6' & 6 & & & \\
 \hline
 \end{array}$$
 
