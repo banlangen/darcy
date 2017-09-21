@@ -31,7 +31,7 @@ p\s & a & b & c \\
 \hline 
 3 & & & \\
 \hline
-end{array}$$
+\end{array}$$
 
 #### Code
 
