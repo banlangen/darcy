@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "leetcode 47. Permutations II"
-date: 2017-09-18 19:00:00 +0800 
+date: 2017-09-22 19:00:00 +0800 
 categories: 算法
 tags: 
     - dfs
