@@ -81,8 +81,8 @@ public:
         int nextMax = 0;
         int step = 0;
         int index = 0;
-        while (index <= curMax) {
-            while (index <= curMax) {
+        while (index <= curMax) { //考虑特殊情况[2, 1, 3, 1, 1, 0, 1], 下标为2的时候，它的值为3，curmax最大到5，而其nextmax一直是5(5 + 0 = 5)，这个时候会出现index > nextmax的时候，这个情况发生的时候肯定走不下去了。
+            while (index <= curMax) { //index可能会超过curmax
                 nextMax = max(nextMax, index + nums[index]);
                 index++;
             }
