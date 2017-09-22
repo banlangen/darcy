@@ -21,7 +21,13 @@ tags:
 
 #### Solution
 
-&emsp;&emsp;
+<div>
+<video id='movie' width='90%' controls poster='http://ovwkcbdpf.bkt.clouddn.com/image/videopostert.png'>
+    <source src='http://pan.baidu.com/s/1c26e2i8' type = 'video/webm'>
+    Your browser does not support the video tag.
+</video>
+</div>
+<script type='text/javascript'>document.getElementById('movie').style.height=document.getElementById('movie').scrollWidth*0.8+'px'</script>
 
 #### Code
 
