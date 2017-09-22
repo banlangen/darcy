@@ -22,7 +22,7 @@ tags:
 
 <div>
 <video width='320' height='240' controls>
-  <source src='http://ovwkcbdpf.bkt.clouddn.com/image/leetcode48/2017-09-22-LeetCode-48-Rotate-Image.mp4' type='video/mp4'>
+  <source src='http://ovwkcbdpf.bkt.clouddn.com/image/leetcode48/2017-09-22-LeetCode-48-Rotate-Image.3gp' type='video/3gp'>
   Your browser does not support the video tag.
 </video>
 </div>
