@@ -21,7 +21,7 @@ tags:
 #### Solution
 
 <div>
-<video id='movie' width='90%'>
+<video id='movie' width='90%' controls>
     <source src='http://ovwkcbdpf.bkt.clouddn.com/image/leetcode48/2017-09-22-LeetCode-48-Rotate-Image.webm' type = 'video/webm'>
     Your browser does not support the video tag.
 </video>
