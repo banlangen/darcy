@@ -20,13 +20,7 @@ tags:
 
 #### Solution
 
-<div>
-<video id='movie' width='90%' height='360' controls aling='middle'>
-  <source src='http://ovwkcbdpf.bkt.clouddn.com/image/leetcode48/2017-09-22-LeetCode-48-Rotate-Image.webm' type='video/webm'>
-  Your browser does not support the video tag.
-</video>
-</div>
-
+<embed id='movie' src='http://ovwkcbdpf.bkt.clouddn.com/image/leetcode48/2017-09-22-LeetCode-48-Rotate-Image.webm' allowfullscreen='true' quality='high' width='90%' align='middle' allowscriptaccess='always' type='application/x-shockwave-flash'/>
 <script type='text/javascript'>document.getElementById('movie').style.height=document.getElementById('movie').scrollWidth*0.8+'px'</script>
 
 #### Code
