@@ -26,7 +26,7 @@ tags:
     Your browser does not support the video tag.
 </video>
 </div>
-<script type='text/javascript'>document.getElementById('movie').style.height=document.getElementById('movie').scrollWidth*0.8+'px'</script>
+<script type='text/javascript'>document.getElementById('movie').style.height=document.getElementById('movie').width*0.8+'px'</script>
 
 #### Code
 
