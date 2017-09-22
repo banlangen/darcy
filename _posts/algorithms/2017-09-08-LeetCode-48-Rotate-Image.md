@@ -21,11 +21,13 @@ tags:
 #### Solution
 
 <div>
-<video width='480' height='360' controls>
+<video id='movie' width='90%' height='360' controls aling='middle'>
   <source src='http://ovwkcbdpf.bkt.clouddn.com/image/leetcode48/2017-09-22-LeetCode-48-Rotate-Image.webm' type='video/webm'>
   Your browser does not support the video tag.
 </video>
 </div>
+
+<script type='text/javascript'>document.getElementById('movie').style.height=document.getElementById('movie').scrollWidth*0.8+'px'</script>
 
 #### Code
 
