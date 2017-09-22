@@ -20,7 +20,7 @@ tags:
 
 #### Solution
 
-<embed id='movie' src='http://ovwkcbdpf.bkt.clouddn.com/image/leetcode48/2017-09-22-LeetCode-48-Rotate-Image.webm' allowfullscreen='true' quality='high' width='90%' align='middle' allowscriptaccess='always' type='application/x-shockwave-flash'/>
+<embed id='movie' src='http://ovwkcbdpf.bkt.clouddn.com/image/leetcode48/2017-09-22-LeetCode-48-Rotate-Image.webm' allowfullscreen='true' quality='high' width='90%' align='middle' allowscriptaccess='always' type='application/webm'/>
 <script type='text/javascript'>document.getElementById('movie').style.height=document.getElementById('movie').scrollWidth*0.8+'px'</script>
 
 #### Code
