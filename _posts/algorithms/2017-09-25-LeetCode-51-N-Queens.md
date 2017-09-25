@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "leetcode 51. N-Queens"
-date: 2017-09-18 19:00:00 +0800 
+date: 2017-09-25 19:00:00 +0800 
 categories: 算法
 tags: 
 ---
