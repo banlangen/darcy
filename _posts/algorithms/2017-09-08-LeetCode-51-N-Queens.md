@@ -28,7 +28,7 @@ tags:
 </div>
 <script type='text/javascript'>document.getElementById('movie').style.height=document.getElementById('movie').scrollWidth*0.8+'px'</script>
 
-&emsp;&emsp;第一次尝试，发现超时，发现重复计算非常多，现在定义一个vector'<'vector'<'bool'>'>' 尝试保存之前的结果
+&emsp;&emsp;第一次尝试，发现超时。
 
 #### Code
 
