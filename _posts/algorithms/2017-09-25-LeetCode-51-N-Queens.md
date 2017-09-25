@@ -28,16 +28,15 @@ tags:
 </div>
 <script type='text/javascript'>document.getElementById('movie').style.height=document.getElementById('movie').scrollWidth*0.8+'px'</script>
 
-&emsp;&emsp;第一次尝试，发现超时。
+&emsp;&emsp;第一次尝试，发现超时，关键原因在于判断
 
 #### Code
 
 ```cpp
 class Solution {
 public:
-    
     bool valid(vector<vector<char>> &res, int r, int c) {
-        vector<pair<int, int>> direction = {{1, 1}, {-1, 1}, {1, -1}, {-1, -1}};
+        vector<pair<int, int>> direction = { {1, 1}, {-1, 1}, {1, -1}, {-1, -1} };  
         for (int i = 0; i < res.size(); i++) {
             if (res[i][c] == 'Q') {
                 //cout << res[i][c] << endl;
@@ -55,7 +54,6 @@ public:
             int tc = c;
             while (0 <= (tr + direction[i].second) && (tr + direction[i].second) < res.size() && 0 <= (tc + direction[i].first) && (tc + direction[i].first) < res.size()) {
                 if (res[tr + direction[i].second][tc + direction[i].first] == 'Q') {
-                    //cout << res[r + direction[i].second][c + direction[i].first] << endl;
                     return false;
                 }
                 tr = tr + direction[i].second;
@@ -63,16 +61,6 @@ public:
             }
         }
         return true;
-    }
-    
-    void printout(vector<vector<char>> &item) {
-        for (int i = 0; i < item.size(); i++) {
-            for (int j = 0; j < item[0].size(); j++) {
-                cout << item[i][j] << " ";
-            }
-            cout << endl;
-        }
-        cout << endl;
     }
     
     void helper(vector<vector<string>> &res, vector<vector<char>> &item, int cnt, int r, int c) {
