@@ -104,7 +104,53 @@ public:
 };
 ```
 
+##### 优化
 
+```cpp
+class Solution {
+public:
+    void helper(vector<vector<string>> &res, vector<vector<char>> &item, vector<bool> &col, vector<bool> &diag_x, vector<bool> &diag_y, int cnt, int i) {
+        if (cnt == 0) {
+            vector<string> nitem;
+            for (int i = 0; i < item.size(); i++) {
+                string str = "";
+                for (int j = 0; j < item[0].size(); j++) {
+                    str += item[i][j];
+                }
+                nitem.push_back(str);
+            }
+            res.push_back(nitem);
+            return;
+        }
+        for (int j = 0; j < item[0].size(); j++) {
+            if (col[j] && diag_x[i + j] && diag_y[i - j + item.size() - 1]) {
+                item[i][j] = 'Q';
+                col[j] = false;
+                diag_x[i + j] = false;
+                diag_y[i - j + item.size() - 1] = false;
+                helper(res, item, col, diag_x, diag_y, cnt - 1, i + 1);
+                col[j] = true;
+                diag_x[i + j] = true;
+                diag_y[i - j + item.size() - 1] = true;
+                item[i][j] = '.';
+            }
+        }
+    }
+    vector<vector<string>> solveNQueens(int n) {
+        vector<vector<string>> res;
+        vector<vector<char>> item(n, vector<char>(n, '.'));
+        if (n == 0) {
+            return res;
+        }
+        //vector<bool> row(n, true);
+        vector<bool> col(n, true);
+        vector<bool> diag_x(2 * n - 1, true);
+        vector<bool> diag_y(2 * n - 1, true);
+        helper(res, item, col, diag_x, diag_y, n, 0);
+        return res;
+    }
+};
+```
 #### Time Complexity
 
 O(n);
