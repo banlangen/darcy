@@ -21,6 +21,7 @@ tags:
 #### Solution
 
 ##### Iteration
+
 <div>
 <video id='movie' width='90%' controls poster='http://ovwkcbdpf.bkt.clouddn.com/image/videopostert.png'>
     <source src='http://ovwkcbdpf.bkt.clouddn.com/image/leetcode50/2017-09-22-LeetCode-50-Rotate-Image.webm' type = 'video/webm'>
@@ -34,6 +35,8 @@ tags:
 
 
 #### Code
+
+##### Iteration
 
 ```cpp
 class Solution {
@@ -67,6 +70,40 @@ public:
 };
 ```
 
+##### Recursion
+
+```cpp
+class Solution {
+public:
+    double myPow(double x, int n) {
+        if (x == 1 || n == 0) {
+            return 1;
+        }
+        
+        if (n < 0) {
+            x = 1 / x;
+            n = abs(n); //在C++中对INT_MIN取绝对值其实是一个未定义行为，但在运行这条代码的时候，没有发生异常。
+        }
+        return helper(x, n);
+    }
+    
+    double helper(double x, int n) {
+        if (n == 1) {
+            return x;
+        }
+        if (n == 0) {
+            return 1;
+        }
+        
+        double t = helper(x, n / 2);
+        if (n % 2 == 0) {
+            return t * t;
+        }else {
+            return t * t * x;
+        }
+    }
+};
+```
 
 #### Time Complexity
 
