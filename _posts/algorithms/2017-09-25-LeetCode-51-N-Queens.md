@@ -20,7 +20,7 @@ tags:
 
 #### Solution
 
-&emsp;&emsp;第一次尝试，发现超时，关键原因在于判断。
+&emsp;&emsp;第一次尝试，发现超时，关键原因在于valid函数进行了多次判断，实际上我们并没有必要每次都去判断行，列，对角线的每一个元素，我们只需要标记这行上面有没有元素就可以，所以有下面的更优的解法。
 
 <div>
 <video id='movie' width='90%' controls poster='http://ovwkcbdpf.bkt.clouddn.com/image/videopostert.png'>
@@ -30,9 +30,11 @@ tags:
 </div>
 <script type='text/javascript'>document.getElementById('movie').style.height=document.getElementById('movie').scrollWidth*0.8+'px'</script>
 
-
+&emsp;&emsp;
 
 #### Code
+
+##### 超时版本
 
 ```cpp
 class Solution {
