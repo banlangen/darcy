@@ -20,15 +20,17 @@ tags:
 
 #### Solution
 
+&emsp;&emsp;第一次尝试，发现超时，关键原因在于判断。
+
 <div>
 <video id='movie' width='90%' controls poster='http://ovwkcbdpf.bkt.clouddn.com/image/videopostert.png'>
-    <source src='http://pan.baidu.com/s/1c26e2i8' type = 'video/webm'>
+    <source src='http://ovwkcbdpf.bkt.clouddn.com/image/leetcode51/2017-09-25-LeetCode-51-N-Queens.webm' type = 'video/webm'>
     Your browser does not support the video tag.
 </video>
 </div>
 <script type='text/javascript'>document.getElementById('movie').style.height=document.getElementById('movie').scrollWidth*0.8+'px'</script>
 
-&emsp;&emsp;第一次尝试，发现超时，关键原因在于判断
+
 
 #### Code
 
