@@ -25,4 +25,4 @@ tag:
 1. 子事件。事件A发生蕴含事件B发生，那么称事件A为B的子事件，记为$$A \subset B$$
 2. 事件的和。{A发生或B发生}记为事件A与B的和，记为$$A \cup B$$，一种推广，{A1发生或者A2发生...或者An发生} = {A1...An中间至少有一个事件发生}，记为事件A1到An的和，$$\bigcup_{i=1}^{n}{A_i} $$.
 3. 事件的积。A,B两个事件同时发生，事件{A,B同时发生}称为事件A与B的交集。$$A \cap B$$ 或者$$A \cdot B$$ 或者AB。推广，事件{A1...An同时发生}称为事件A1...An的积，记为$$\bigcap_{i=1}^{n}{A_i}$$
-4. 对立事件，事件{A不发生}，这样的时间称为事件A的对立事件，记为$$\overline{A}$$(或$$A^c$$)。$$A \cap \overline{A} = \phi$$ 而 $$A \cup \overline{A} = \Omega$$。现在如果$$ \overline{A_1 \cup A_2 \cup \cdot \cdot \cdot \cup A_n} = \overline{A_1} \cap \overline{A_2} \cap \cap \cdot \cdot \cdot \cap \overline{A_n}$$
+4. 对立事件，事件{A不发生}，这样的时间称为事件A的对立事件，记为$$\overline{A}$$(或$$A^c$$)。$$A \cap \overline{A} = \phi$$ 而 $$A \cup \overline{A} = \Omega$$。现在如果$$ \overline{A_1 \cup A_2 \cup \cdot \cdot \cdot \cup A_n} = \overline{A_1} \cap \overline{A_2} \cap \cdot \cdot \cdot \cap \overline{A_n}$$
