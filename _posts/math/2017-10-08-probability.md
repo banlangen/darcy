@@ -4,7 +4,6 @@ title: "概率论与数理统计"
 date: 2017-10-08 09:00:00 +0800 
 categories: 数学
 tag: 
-    - 
 ---
 * content
 {:toc}
