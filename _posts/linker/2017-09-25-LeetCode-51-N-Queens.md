@@ -26,13 +26,13 @@ tags:
 &emsp;&emsp;目标文件至少包含编译后的机器指令代码，数据。除此之外还有重要的链接信息，比如符号表，调试信息，字符串。目标文件将这些以section的形式存储，有时候也称为segment，都表示一定长度的区域。机器指令放在代码段，.code 或者 .text，全局变量和局部静态变量数据经常放在数据段 .data  
 $$\begin{array}{|c|}
 \hline
-File Header \\
+File&emsp;&emsp;Header \\
 \hline
-.text section \\
+.text&emsp;&emsp;section \\
 \hline
-.data section \\
+.data&emsp;&emsp;section \\
 \hline
-.bss section \\
+.bss&emsp;&emsp;section \\
 \hline
 \end{array}$$
 
