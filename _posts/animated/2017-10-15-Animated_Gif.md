@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "plotagraph Animated Gif"
+title: "Plotagraph Animated Gif"
 date: 2017-10-14 19:00:00 +0800 
 categories: 动图
 tags: 
